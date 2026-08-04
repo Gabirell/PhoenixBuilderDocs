@@ -1,0 +1,132 @@
+site_name: Phoenix Builder Documentation
+site_description: The official documentation for the Phoenix Ecosystem
+site_author: Gabriel Netto
+site_url: https://gabirell.github.io/PhoenixBuilderDocs/
+
+repo_name: Gabirell/PhoenixBuilderDocs
+repo_url: https://github.com/Gabirell/PhoenixBuilderDocs
+
+theme:
+  name: material
+
+  language: en
+
+  logo: images/logo.png
+  favicon: images/favicon.png
+
+  palette:
+
+    - scheme: slate
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Light Mode
+
+    - scheme: default
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Dark Mode
+
+  features:
+
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+
+markdown_extensions:
+
+  - admonition
+
+  - attr_list
+
+  - md_in_html
+
+  - tables
+
+  - footnotes
+
+  - pymdownx.details
+
+  - pymdownx.superfences
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - pymdownx.highlight
+
+  - pymdownx.inlinehilite
+
+  - pymdownx.magiclink
+
+  - pymdownx.keys
+
+  - pymdownx.tasklist
+
+plugins:
+
+  - search
+
+nav:
+
+  - Home: index.md
+
+  - Manifesto:
+      - Phoenix Manifesto: design-bible/PhoenixManifesto.md
+
+  - Phoenix Builder Design Bible:
+
+      - 00 Index: design-bible/00_Index.md
+
+      - 01 Vision: design-bible/01_Vision.md
+
+      - 02 Philosophy: design-bible/02_Philosophy.md
+
+      - 03 User Experience: design-bible/03_UserExperience.md
+
+      - 04 Interface: design-bible/04_Interface.md
+
+      - 05 Building Workflow: design-bible/05_BuildingWorkflow.md
+
+      - 06 Architectural Surface System: design-bible/06_ArchitecturalSurfaceSystem.md
+
+      - 07 Construction Grammar: design-bible/07_ConstructionGrammar.md
+
+      - 08 Assembly Engine: design-bible/08_AssemblyEngine.md
+
+      - 09 Asset Ecosystem: design-bible/09_AssetEcosystem.md
+
+      - 10 Building DNA: design-bible/10_BuildingDNA.md
+
+      - 11 Procedural Architecture: design-bible/11_ProceduralArchitecture.md
+
+      - 12 Rendering & Viewport: design-bible/12_RenderingAndViewport.md
+
+      - 13 Export Profiles: design-bible/13_ExportProfiles.md
+
+      - 14 Phoenix Integration: design-bible/14_PhoenixIntegration.md
+
+      - 15 Roadmap: design-bible/15_Roadmap.md
+
+      - 16 Decision Log: design-bible/16_DecisionLog.md
+
+  - SDK:
+
+      - sdk/00_PhoenixSDKOverview.md
+
+extra:
+
+  social:
+
+    - icon: fontawesome/brands/github
+      link: https://github.com/Gabirell

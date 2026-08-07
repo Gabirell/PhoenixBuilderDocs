@@ -1,37 +1,41 @@
 # Phoenix Ecosystem - Project Status
 
-## Project Versioning
-- **MkDocs Documentation**: v2.0.0
-- **Phoenix Builder**: v0.1.0 (Conceptual & Design Phase)
+## Current Version
+- **Ecosystem Specs & Docs**: v2.0.0
+- **Phoenix Builder**: v0.1.0 (Conceptual Design Phase)
 
 ## Current Sprint
-- **Sprint Goal**: Documentation, Core Architecture Specification & ADR Foundation.
-- **Current Objective**: Establish the **Phoenix Asset Specification** (`.pbp` and `.pba` formats) and the Architectural Decision Record (ADR) framework.
+- **Sprint Name**: Core Specifications & Architectural Foundation
 
-## Current Priorities
-1. **Phoenix Asset Specification**: Draft the file format specifications for `.pbp` (Phoenix Primitive) and `.pba` (Phoenix Building Asset) schemas.
-2. **ADR Framework**: Define and set up the `docs/adr/` structure for documenting architectural choices.
-3. **GitHub Deployment**: Ensure automation of MkDocs publishing to GitHub Pages on commit to `main`.
+## Current Milestone
+- **Milestone 0**: Foundation Complete (Scaffolding, ADRs, Docs Portal Setup)
 
-## Status of Key Components
+## Current Goal
+- Establish the **Phoenix SDK** contracts and specifications as the core shared interface of the ecosystem.
 
-### 🏛 Phoenix Builder (macOS App)
-- **Status**: Design & Architecture
-- [x] Design Bible Draft
-- [x] AI Context and Workspace Rules alignment
-- [ ] Asset Spec Draft
-- [ ] Core UI Mockups
-- [ ] SceneKit Viewport Prototyping
+## Current Focus
+1. Restructuring documentation layout to be Ecosystem-centric.
+2. Splitting file format decisions into modular ADRs (Philosophy, Primitive, Building Asset).
+3. Defining the detailed format specifications for `.pbp` and `.pba` structures in `docs/specifications/`.
 
-### 🔥 Phoenix Forge (Blender Add-on)
-- **Status**: Planning
-- [ ] Semantic Asset Exporter Specifications
-- [ ] Metadata / Socket Editor Design
+## Completed
+- [x] Create core repo structure and workspace
+- [x] Configure MkDocs Material & automatic deployment
+- [x] Establish `AI_CONTEXT.md` and `AGENTS.md` rules
+- [x] Define step-by-step assistant engineering process
 
-### 🎮 Phoenix Engine (Swift) & HowNotToDie (Validation)
-- **Status**: Planning
-- [ ] Specification of Asset Consumer Layer
+## Blocked
+- None
 
-## Next Milestones
-- **v0.2.0**: Finalized Asset Specification and ADR-001 (File Formats & Data Model approval).
-- **v0.3.0**: Automatic build/deploy CI/CD workflow & initial UI wireframes.
+## Known Risks
+- **Long-term SDK Drift**: If Forge, Builder, or Engine modify their asset interpretation independently, the ecosystem breaks. Mitigation: Enforce strict adherence to schemas in `docs/specifications/` and the "Golden Rule" in `AGENTS.md`.
+
+## Next Milestone
+- **Milestone 1: Phoenix SDK Alpha**: Finalized specifications for `.pbp` and `.pba` and their validation schemas.
+
+## Recent Decisions
+- **ADR-001 (Proposed)**: Decided on a Hybrid Package structure (JSON for metadata, glTF/USD for binary meshes) to separate geometry from metadata.
+
+## Upcoming ADRs
+- **ADR-002**: `.pbp` (Parametric Primitive) schema specifications.
+- **ADR-003**: `.pba` (Building Asset) socket and metadata integration structure.

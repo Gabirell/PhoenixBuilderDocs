@@ -29,5 +29,12 @@ The ecosystem consists of four independent but integrated projects:
 ## Golden Rule
 - **No AI assistant may introduce a feature that changes the philosophy of Phoenix Builder without first proposing a Design Bible update.**
 
-Whenever suggesting a feature or implementation, verify that it aligns with this architecture.
+Before implementing any feature, follow this engineering process:
+1. **Align**: Verify that it aligns with the Design Bible.
+2. **Propose**: If not, propose a Design Bible update first.
+3. **Approve**: Once accepted, update the Design Bible.
+4. **Schedule**: Update the Roadmap/Milestones in the documentation.
+5. **Implement**: Implement the feature in code.
+6. **Document**: Document the final implementation details.
+
 For full context, refer to [AI_CONTEXT.md](file:///Users/gabrielnetto/Documents/Programaciones/Phoenix/PhoenixBuilderDocs/AI_CONTEXT.md).

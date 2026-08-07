@@ -33,4 +33,7 @@ Describe the impact of this decision (e.g., changes to file formats, new depende
 
 | ADR ID | Title | Status | Date |
 |--------|-------|--------|------|
-| [ADR-001](001_PhoenixAssetSpecification.md) | File Format Schema for .pbp and .pba | Proposed | 2026-08-07 |
+| [ADR-001](001_PhoenixAssetPhilosophy.md) | Phoenix Asset Philosophy (Primitive vs. Building Asset) | Proposed | 2026-08-07 |
+| [ADR-002](002_ParametricPrimitiveArchitecture.md) | Parametric Primitive Architecture (.pbp) | Proposed | 2026-08-07 |
+| [ADR-003](003_BuildingAssetArchitecture.md) | Building Asset Architecture (.pba) | Proposed | 2026-08-07 |
+

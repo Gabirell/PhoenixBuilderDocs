@@ -12,11 +12,13 @@
         <meta name="author" content="Gabriel Netto">
       
       
-        <link rel="canonical" href="https://gabirell.github.io/PhoenixBuilderDocs/adr/004_PhoenixArchitecturalLanguage/">
+        <link rel="canonical" href="https://gabirell.github.io/PhoenixBuilderDocs/pal/grammar/">
       
       
-        <link rel="prev" href="../003_BuildingAssetArchitecture/">
+        <link rel="prev" href="../philosophy/">
       
+      
+        <link rel="next" href="../ontology/">
       
       
         
@@ -27,7 +29,7 @@
     
     
       
-        <title>ADR-004 (PAL Ontology) - Phoenix Builder Documentation</title>
+        <title>3. Grammar & Inheritance - Phoenix Builder Documentation</title>
       
     
     
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adr-004-phoenix-architectural-language-pal-ontology" class="md-skip">
+        <a href="#chapter-3-grammar-inheritance" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ADR-004 (PAL Ontology)
+              3. Grammar & Inheritance
             
           </span>
         </div>
@@ -268,11 +270,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../pal/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -400,13 +404,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../adr/" class="md-tabs__link">
           
   
   
@@ -1098,6 +1100,8 @@
       
   
   
+    
+  
   
   
     
@@ -1123,22 +1127,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../pal/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1156,13 +1161,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1182,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pal/philosophy/" class="md-nav__link">
+      <a href="../philosophy/" class="md-nav__link">
         
   
   
@@ -1207,10 +1212,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../pal/grammar/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Grammar & Inheritance
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1226,6 +1258,87 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-pal-inheritance-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The PAL Inheritance Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-inheritance-simplifies-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Inheritance Simplifies Development
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Inheritance Simplifies Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-polymorphic-sockets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Polymorphic Sockets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-high-level-style-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. High-Level Style Overrides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-shared-behaviors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Shared Behaviors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1238,7 +1351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pal/ontology/" class="md-nav__link">
+      <a href="../ontology/" class="md-nav__link">
         
   
   
@@ -1266,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pal/rules/" class="md-nav__link">
+      <a href="../rules/" class="md-nav__link">
         
   
   
@@ -1294,7 +1407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pal/style_system/" class="md-nav__link">
+      <a href="../style_system/" class="md-nav__link">
         
   
   
@@ -1322,7 +1435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pal/constraints/" class="md-nav__link">
+      <a href="../constraints/" class="md-nav__link">
         
   
   
@@ -1804,8 +1917,6 @@
       
   
   
-    
-  
   
   
     
@@ -1827,23 +1938,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../adr/" class="md-nav__link ">
               
   
   
@@ -1861,13 +1971,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1887,7 +1997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../001_PhoenixAssetPhilosophy/" class="md-nav__link">
+      <a href="../../adr/001_PhoenixAssetPhilosophy/" class="md-nav__link">
         
   
   
@@ -1915,7 +2025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../002_ParametricPrimitiveArchitecture/" class="md-nav__link">
+      <a href="../../adr/002_ParametricPrimitiveArchitecture/" class="md-nav__link">
         
   
   
@@ -1943,7 +2053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../003_BuildingAssetArchitecture/" class="md-nav__link">
+      <a href="../../adr/003_BuildingAssetArchitecture/" class="md-nav__link">
         
   
   
@@ -1968,37 +2078,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    ADR-004 (PAL Ontology)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../adr/004_PhoenixArchitecturalLanguage/" class="md-nav__link">
         
   
   
@@ -2014,109 +2097,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#context-problem-statement" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Context &amp; Problem Statement
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#considered-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Considered Options
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Considered Options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-1-code-level-api-traditional-sdk-approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 1: Code-Level API (Traditional SDK approach)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-2-mesh-tags-and-naming-conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 2: Mesh Tags and Naming Conventions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-3-semantic-ontology-phoenix-architectural-language-pal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 3: Semantic Ontology - Phoenix Architectural Language (PAL)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decision-outcome" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Decision Outcome
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#consequences" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Consequences
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2156,10 +2136,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#context-problem-statement" class="md-nav__link">
+  <a href="#the-pal-inheritance-hierarchy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Context &amp; Problem Statement
+        The PAL Inheritance Hierarchy
       
     </span>
   </a>
@@ -2167,22 +2147,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#considered-options" class="md-nav__link">
+  <a href="#how-inheritance-simplifies-development" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Considered Options
+        How Inheritance Simplifies Development
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Considered Options">
+    <nav class="md-nav" aria-label="How Inheritance Simplifies Development">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#option-1-code-level-api-traditional-sdk-approach" class="md-nav__link">
+  <a href="#1-polymorphic-sockets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 1: Code-Level API (Traditional SDK approach)
+        1. Polymorphic Sockets
       
     </span>
   </a>
@@ -2190,10 +2170,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-2-mesh-tags-and-naming-conventions" class="md-nav__link">
+  <a href="#2-high-level-style-overrides" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 2: Mesh Tags and Naming Conventions
+        2. High-Level Style Overrides
       
     </span>
   </a>
@@ -2201,10 +2181,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-3-semantic-ontology-phoenix-architectural-language-pal" class="md-nav__link">
+  <a href="#3-shared-behaviors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 3: Semantic Ontology - Phoenix Architectural Language (PAL)
+        3. Shared Behaviors
       
     </span>
   </a>
@@ -2213,28 +2193,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decision-outcome" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Decision Outcome
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#consequences" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Consequences
-      
-    </span>
-  </a>
   
 </li>
       
@@ -2255,7 +2213,7 @@
 
 
   
-    <a href="https://github.com/Gabirell/PhoenixBuilderDocs/edit/master/docs/adr/004_PhoenixArchitecturalLanguage.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Gabirell/PhoenixBuilderDocs/edit/master/docs/pal/grammar.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2263,59 +2221,49 @@
   
 
 
-<h1 id="adr-004-phoenix-architectural-language-pal-ontology">ADR-004: Phoenix Architectural Language (PAL) Ontology</h1>
-<ul>
-<li><strong>Status</strong>: Proposed</li>
-<li><strong>Date</strong>: 2026-08-07</li>
-<li><strong>Authors</strong>: Antigravity &amp; Gabriel Netto</li>
-<li><strong>Decisions Superseded</strong>: None (Refines SDK definition to PAL)</li>
-</ul>
+<h1 id="chapter-3-grammar-inheritance">Chapter 3: Grammar &amp; Inheritance</h1>
+<p>To keep the platform flexible and avoid writing unique code for hundreds of different objects, PAL uses a <strong>hierarchical grammar</strong>. Elements are organized into an inheritance tree. </p>
+<p>When Phoenix Builder needs to evaluate rules or apply styles, it query-checks classes at any node in the inheritance tree.</p>
 <hr />
-<h2 id="context-problem-statement">Context &amp; Problem Statement</h2>
-<p>To bind <strong>Phoenix Forge</strong> (Blender), <strong>Phoenix Builder</strong> (standalone editor), and <strong>Phoenix Engine</strong> (Swift) into a unified platform, they must share a common understanding of what assets are. </p>
-<p>Standard modular kits and game editors classify assets using arbitrary mesh file names (e.g. <code>gothic_wall_left_v3.fbx</code>), naming conventions, or folder structures. This presents several problems for procedural tools:
-1. <strong>No Semantic Rules</strong>: The system has no way of knowing that a mesh represents a "door" and requires a "wall host" to be placed, or that a "cornice" must align along the top edges of a "wall".
-2. <strong>Fragile Snapping</strong>: Snapping relies on mathematical bounding boxes rather than structural alignment rules.
-3. <strong>Rigid Styles</strong>: Changing the visual style of a building (e.g., swapping a cottage window for a gothic window) requires manually replacing each mesh instance rather than updating a styling grammar.</p>
-<p>We need a unified, platform-agnostic way to define the rules, relationships, and capabilities of every architectural component.</p>
+<h2 id="the-pal-inheritance-hierarchy">The PAL Inheritance Hierarchy</h2>
+<p>Below is the foundational inheritance map for PAL element classes:</p>
+<div class="highlight"><pre><span></span><code>                            PAL Element
+                                 │
+     ┌───────────────────────────┼───────────────────────────┐
+     ▼                           ▼                           ▼
+Structural Element            Opening                      Trim
+     │                           │                           │
+     ├─ VerticalStructure        ├─ Door                     ├─ Baseboard
+     │    └─ Wall                ├─ Window                   ├─ Chair Rail
+     │    └─ Column              ├─ Arch                     ├─ Cornice
+     │    └─ Buttress            └─ Gate                     ├─ Coving
+     │                                                       ├─ Ledge
+     ├─ HorizontalStructure                                  ├─ Window Sill
+     │    └─ Foundation                                      └─ Door Surround
+     │    └─ Floor
+     │    └─ Ceiling
+     │
+     └─ SlopedStructure
+          └─ RoofPlane
+          └─ Stair
+</code></pre></div>
 <hr />
-<h2 id="considered-options">Considered Options</h2>
-<h3 id="option-1-code-level-api-traditional-sdk-approach">Option 1: Code-Level API (Traditional SDK approach)</h3>
-<ul>
-<li>We write a Swift library (for Builder/Engine) and a Python library (for Forge/Blender) containing shared functions and data structures.</li>
-<li><strong>Pros</strong>: Safe types, autocomplete support in IDEs, direct runtime execution.</li>
-<li><strong>Cons</strong>: Language locking. If we expand to support Unity (C#) or Godot (C++/GDScript), we must port the entire SDK logic. It mixes software implementation details with pure architectural concepts.</li>
-</ul>
-<h3 id="option-2-mesh-tags-and-naming-conventions">Option 2: Mesh Tags and Naming Conventions</h3>
-<ul>
-<li>We establish naming rules for mesh nodes in Blender (e.g. prefixing sockets with <code>SOCK_</code> or meshes with <code>WALL_</code>).</li>
-<li><strong>Pros</strong>: Simple, zero file-format changes.</li>
-<li><strong>Cons</strong>: Unstructured, highly error-prone, and cannot enforce complex rules (like "a window cannot float in mid-air").</li>
-</ul>
-<h3 id="option-3-semantic-ontology-phoenix-architectural-language-pal">Option 3: Semantic Ontology - Phoenix Architectural Language (PAL)</h3>
-<ul>
-<li>We establish a formal specification dictionary detailing every architectural class (Wall, Door, Window, Column, Cornice) as a semantic concept. </li>
-<li>Every class in PAL defines:</li>
-<li><strong>Inputs &amp; Hosts</strong>: What other classes it attaches to.</li>
-<li><strong>Sockets</strong>: What slots it provides for child elements.</li>
-<li><strong>Behavior Constraints</strong>: Snapping, clearance volumes, and navigation behaviors.</li>
-<li><strong>Pros</strong>:</li>
-<li><strong>Style Independence</strong>: Enables style-swapping at the ontological level (swapping a Victorian Door for a Gothic Door of the same semantic class without altering geometry anchors).</li>
-<li><strong>Tool-Agnostic</strong>: Defines the <em>intent</em> of architecture. Python (Blender), Swift (Builder/Engine), and C# (Unity/Godot) simply implement validators matching this shared ontology.</li>
-<li><strong>True Architecture</strong>: Users design buildings using architectural constructs instead of raw meshes.</li>
-<li><strong>Cons</strong>: Requires documenting and maintaining an extensive class dictionary.</li>
-</ul>
-<hr />
-<h2 id="decision-outcome">Decision Outcome</h2>
-<p>We chose <strong>Option 3: Semantic Ontology (PAL)</strong>.</p>
-<p>We will establish the <strong>Phoenix Architectural Language (PAL)</strong> specifications. PAL will be the single canonical index of all architectural classes. Forge, Builder, and Engine will conform to this dictionary.</p>
-<hr />
-<h2 id="consequences">Consequences</h2>
-<ul>
-<li><strong>Ontological Validation</strong>: Phoenix Forge will read the PAL dictionary to validate exported <code>.pba</code> packages (e.g., checking that a door has a valid hinge socket and clearance metadata).</li>
-<li><strong>Semantic Swapping</strong>: Phoenix Builder can procedurally replace elements (e.g., "Replace all baseboard trims") because Baseboard is a first-class class, not an arbitrary filename.</li>
-<li><strong>Unified Platform Contract</strong>: Future extensions (like District Builder or new game engines) implement PAL specifications rather than low-level layout code.</li>
-</ul>
+<h2 id="how-inheritance-simplifies-development">How Inheritance Simplifies Development</h2>
+<h3 id="1-polymorphic-sockets">1. Polymorphic Sockets</h3>
+<p>Instead of configuring a socket on a wall to only accept a single window file like <code>window_gothic_lancet_01</code>, the socket defines its constraint as <code>allowed_classes: ["Window"]</code>. 
+Because <code>GothicLancetWindow</code> inherits from <code>Window</code>, it is automatically accepted by the socket. If the user later imports a <code>ModernCasementWindow</code>, it will work without modifying the wall's socket constraints.</p>
+<h3 id="2-high-level-style-overrides">2. High-Level Style Overrides</h3>
+<p>Style Families can apply overrides at any level of the inheritance hierarchy.
+* If a style mapping defines:
+  <div class="highlight"><pre><span></span><code><span class="nt">&quot;VerticalStructure&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;surface_recipe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;recipe_weathered_brick&quot;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+  Both <code>Wall</code> and <code>Column</code> elements inherit this brick recipe.
+* If the style family then adds a specific child override:
+  <div class="highlight"><pre><span></span><code><span class="nt">&quot;Column&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;surface_recipe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;recipe_polished_marble&quot;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+  The column will override its parent style and render as marble, while walls remain brick.</p>
+<h3 id="3-shared-behaviors">3. Shared Behaviors</h3>
+<p>All elements inheriting from <code>Opening</code> share the capability to detect host intersections and declare boolean cutout boundaries. All elements inheriting from <code>Trim</code> share the capability to swept-extrude along parent borders.</p>
 
 
 

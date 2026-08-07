@@ -12,11 +12,13 @@
         <meta name="author" content="Gabriel Netto">
       
       
-        <link rel="canonical" href="https://gabirell.github.io/PhoenixBuilderDocs/adr/004_PhoenixArchitecturalLanguage/">
+        <link rel="canonical" href="https://gabirell.github.io/PhoenixBuilderDocs/pal/constraints/">
       
       
-        <link rel="prev" href="../003_BuildingAssetArchitecture/">
+        <link rel="prev" href="../style_system/">
       
+      
+        <link rel="next" href="../../specifications/">
       
       
         
@@ -27,7 +29,7 @@
     
     
       
-        <title>ADR-004 (PAL Ontology) - Phoenix Builder Documentation</title>
+        <title>7. Constraints & Validation - Phoenix Builder Documentation</title>
       
     
     
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adr-004-phoenix-architectural-language-pal-ontology" class="md-skip">
+        <a href="#chapter-7-constraints-validation" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ADR-004 (PAL Ontology)
+              7. Constraints & Validation
             
           </span>
         </div>
@@ -268,11 +270,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../pal/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -400,13 +404,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../adr/" class="md-tabs__link">
           
   
   
@@ -1098,6 +1100,8 @@
       
   
   
+    
+  
   
   
     
@@ -1123,22 +1127,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../pal/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1156,13 +1161,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1182,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pal/philosophy/" class="md-nav__link">
+      <a href="../philosophy/" class="md-nav__link">
         
   
   
@@ -1210,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pal/grammar/" class="md-nav__link">
+      <a href="../grammar/" class="md-nav__link">
         
   
   
@@ -1238,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pal/ontology/" class="md-nav__link">
+      <a href="../ontology/" class="md-nav__link">
         
   
   
@@ -1266,7 +1271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pal/rules/" class="md-nav__link">
+      <a href="../rules/" class="md-nav__link">
         
   
   
@@ -1294,7 +1299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pal/style_system/" class="md-nav__link">
+      <a href="../style_system/" class="md-nav__link">
         
   
   
@@ -1319,10 +1324,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../pal/constraints/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Constraints & Validation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1338,6 +1370,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-forge-exporter-validation-blender" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Forge Exporter Validation (Blender)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-builder-scene-validation-compilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Builder Scene Validation (Compilation)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-platform-interoperability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Platform Interoperability
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1804,8 +1889,6 @@
       
   
   
-    
-  
   
   
     
@@ -1827,23 +1910,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../adr/" class="md-nav__link ">
               
   
   
@@ -1861,13 +1943,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1887,7 +1969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../001_PhoenixAssetPhilosophy/" class="md-nav__link">
+      <a href="../../adr/001_PhoenixAssetPhilosophy/" class="md-nav__link">
         
   
   
@@ -1915,7 +1997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../002_ParametricPrimitiveArchitecture/" class="md-nav__link">
+      <a href="../../adr/002_ParametricPrimitiveArchitecture/" class="md-nav__link">
         
   
   
@@ -1943,7 +2025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../003_BuildingAssetArchitecture/" class="md-nav__link">
+      <a href="../../adr/003_BuildingAssetArchitecture/" class="md-nav__link">
         
   
   
@@ -1968,37 +2050,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    ADR-004 (PAL Ontology)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../adr/004_PhoenixArchitecturalLanguage/" class="md-nav__link">
         
   
   
@@ -2014,109 +2069,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#context-problem-statement" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Context &amp; Problem Statement
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#considered-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Considered Options
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Considered Options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-1-code-level-api-traditional-sdk-approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 1: Code-Level API (Traditional SDK approach)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-2-mesh-tags-and-naming-conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 2: Mesh Tags and Naming Conventions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-3-semantic-ontology-phoenix-architectural-language-pal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 3: Semantic Ontology - Phoenix Architectural Language (PAL)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decision-outcome" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Decision Outcome
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#consequences" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Consequences
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2156,10 +2108,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#context-problem-statement" class="md-nav__link">
+  <a href="#1-forge-exporter-validation-blender" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Context &amp; Problem Statement
+        1. Forge Exporter Validation (Blender)
       
     </span>
   </a>
@@ -2167,60 +2119,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#considered-options" class="md-nav__link">
+  <a href="#2-builder-scene-validation-compilation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Considered Options
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Considered Options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-1-code-level-api-traditional-sdk-approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 1: Code-Level API (Traditional SDK approach)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-2-mesh-tags-and-naming-conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 2: Mesh Tags and Naming Conventions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-3-semantic-ontology-phoenix-architectural-language-pal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 3: Semantic Ontology - Phoenix Architectural Language (PAL)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decision-outcome" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Decision Outcome
+        2. Builder Scene Validation (Compilation)
       
     </span>
   </a>
@@ -2228,10 +2130,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#consequences" class="md-nav__link">
+  <a href="#3-platform-interoperability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Consequences
+        3. Platform Interoperability
       
     </span>
   </a>
@@ -2255,7 +2157,7 @@
 
 
   
-    <a href="https://github.com/Gabirell/PhoenixBuilderDocs/edit/master/docs/adr/004_PhoenixArchitecturalLanguage.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Gabirell/PhoenixBuilderDocs/edit/master/docs/pal/constraints.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2263,59 +2165,30 @@
   
 
 
-<h1 id="adr-004-phoenix-architectural-language-pal-ontology">ADR-004: Phoenix Architectural Language (PAL) Ontology</h1>
-<ul>
-<li><strong>Status</strong>: Proposed</li>
-<li><strong>Date</strong>: 2026-08-07</li>
-<li><strong>Authors</strong>: Antigravity &amp; Gabriel Netto</li>
-<li><strong>Decisions Superseded</strong>: None (Refines SDK definition to PAL)</li>
-</ul>
+<h1 id="chapter-7-constraints-validation">Chapter 7: Constraints &amp; Validation</h1>
+<p>To ensure that assets authored in Blender work immediately in the editor and render without crashing the game client, PAL defines a strict <strong>Validation Contract</strong>.</p>
 <hr />
-<h2 id="context-problem-statement">Context &amp; Problem Statement</h2>
-<p>To bind <strong>Phoenix Forge</strong> (Blender), <strong>Phoenix Builder</strong> (standalone editor), and <strong>Phoenix Engine</strong> (Swift) into a unified platform, they must share a common understanding of what assets are. </p>
-<p>Standard modular kits and game editors classify assets using arbitrary mesh file names (e.g. <code>gothic_wall_left_v3.fbx</code>), naming conventions, or folder structures. This presents several problems for procedural tools:
-1. <strong>No Semantic Rules</strong>: The system has no way of knowing that a mesh represents a "door" and requires a "wall host" to be placed, or that a "cornice" must align along the top edges of a "wall".
-2. <strong>Fragile Snapping</strong>: Snapping relies on mathematical bounding boxes rather than structural alignment rules.
-3. <strong>Rigid Styles</strong>: Changing the visual style of a building (e.g., swapping a cottage window for a gothic window) requires manually replacing each mesh instance rather than updating a styling grammar.</p>
-<p>We need a unified, platform-agnostic way to define the rules, relationships, and capabilities of every architectural component.</p>
+<h2 id="1-forge-exporter-validation-blender">1. Forge Exporter Validation (Blender)</h2>
+<p>When a specialist (Level 3) exports a building asset (<code>.pba</code>) using the <strong>Phoenix Forge</strong> Blender Add-on, the exporter reads the PAL dictionary schemas to run local validation checks:</p>
+<ul>
+<li><strong>Semantic Schema Check</strong>: Verifies that the <code>metadata.json</code> generated has all mandatory fields for its declared <code>semantic_class</code>.</li>
+<li><strong>Socket Nomenclature</strong>: Checks that Blender socket helper objects match PAL naming conventions and positions (e.g., checking that a door frame has matching hinge coordinates).</li>
+<li><strong>Material Slot Verification</strong>: Confirms that every submesh node in the exported <code>.glb</code> matches the named slots in <code>material_interfaces</code>.</li>
+</ul>
+<p>If any check fails, the exporter blocks the export and highlights the invalid parameters inside Blender.</p>
 <hr />
-<h2 id="considered-options">Considered Options</h2>
-<h3 id="option-1-code-level-api-traditional-sdk-approach">Option 1: Code-Level API (Traditional SDK approach)</h3>
+<h2 id="2-builder-scene-validation-compilation">2. Builder Scene Validation (Compilation)</h2>
+<p>When a level designer (Level 1) or variant creator (Level 2) arranges assets in <strong>Phoenix Builder</strong>, the editor runs compilation validation passes to prevent logical errors:</p>
 <ul>
-<li>We write a Swift library (for Builder/Engine) and a Python library (for Forge/Blender) containing shared functions and data structures.</li>
-<li><strong>Pros</strong>: Safe types, autocomplete support in IDEs, direct runtime execution.</li>
-<li><strong>Cons</strong>: Language locking. If we expand to support Unity (C#) or Godot (C++/GDScript), we must port the entire SDK logic. It mixes software implementation details with pure architectural concepts.</li>
+<li><strong>Host Integrity Check</strong>: Ensures all child objects (<code>Openings</code>, <code>Trims</code>, <code>Fixtures</code>) reside within their host boundaries. If a window is dragged completely off a wall, it fails validation.</li>
+<li><strong>Clearance Collision check</strong>: Verifies that door swing volumes and window apertures are not blocked by columns, furniture, or structural wall joins.</li>
+<li><strong>Socket Matching</strong>: Prevents the user from snapping incompatible connectors (e.g., attempting to snap a ceiling ornament into a floor socket).</li>
 </ul>
-<h3 id="option-2-mesh-tags-and-naming-conventions">Option 2: Mesh Tags and Naming Conventions</h3>
-<ul>
-<li>We establish naming rules for mesh nodes in Blender (e.g. prefixing sockets with <code>SOCK_</code> or meshes with <code>WALL_</code>).</li>
-<li><strong>Pros</strong>: Simple, zero file-format changes.</li>
-<li><strong>Cons</strong>: Unstructured, highly error-prone, and cannot enforce complex rules (like "a window cannot float in mid-air").</li>
-</ul>
-<h3 id="option-3-semantic-ontology-phoenix-architectural-language-pal">Option 3: Semantic Ontology - Phoenix Architectural Language (PAL)</h3>
-<ul>
-<li>We establish a formal specification dictionary detailing every architectural class (Wall, Door, Window, Column, Cornice) as a semantic concept. </li>
-<li>Every class in PAL defines:</li>
-<li><strong>Inputs &amp; Hosts</strong>: What other classes it attaches to.</li>
-<li><strong>Sockets</strong>: What slots it provides for child elements.</li>
-<li><strong>Behavior Constraints</strong>: Snapping, clearance volumes, and navigation behaviors.</li>
-<li><strong>Pros</strong>:</li>
-<li><strong>Style Independence</strong>: Enables style-swapping at the ontological level (swapping a Victorian Door for a Gothic Door of the same semantic class without altering geometry anchors).</li>
-<li><strong>Tool-Agnostic</strong>: Defines the <em>intent</em> of architecture. Python (Blender), Swift (Builder/Engine), and C# (Unity/Godot) simply implement validators matching this shared ontology.</li>
-<li><strong>True Architecture</strong>: Users design buildings using architectural constructs instead of raw meshes.</li>
-<li><strong>Cons</strong>: Requires documenting and maintaining an extensive class dictionary.</li>
-</ul>
+<p>Failed validations display as warning markers inside the viewport hierarchy, ensuring errors are resolved before exporting the final scene.</p>
 <hr />
-<h2 id="decision-outcome">Decision Outcome</h2>
-<p>We chose <strong>Option 3: Semantic Ontology (PAL)</strong>.</p>
-<p>We will establish the <strong>Phoenix Architectural Language (PAL)</strong> specifications. PAL will be the single canonical index of all architectural classes. Forge, Builder, and Engine will conform to this dictionary.</p>
-<hr />
-<h2 id="consequences">Consequences</h2>
-<ul>
-<li><strong>Ontological Validation</strong>: Phoenix Forge will read the PAL dictionary to validate exported <code>.pba</code> packages (e.g., checking that a door has a valid hinge socket and clearance metadata).</li>
-<li><strong>Semantic Swapping</strong>: Phoenix Builder can procedurally replace elements (e.g., "Replace all baseboard trims") because Baseboard is a first-class class, not an arbitrary filename.</li>
-<li><strong>Unified Platform Contract</strong>: Future extensions (like District Builder or new game engines) implement PAL specifications rather than low-level layout code.</li>
-</ul>
+<h2 id="3-platform-interoperability">3. Platform Interoperability</h2>
+<p>Because these constraints are defined in <strong>PAL Specifications</strong> (rather than locked inside Builder's Swift code or Forge's Python script), any developer can write custom parser validators. </p>
+<p>This ensures that whether a level is loaded inside the custom Swift <strong>Phoenix Engine</strong> or exported to <strong>Unity/Godot</strong>, it behaves identically, avoiding runtime asset parsing errors.</p>
 
 
 

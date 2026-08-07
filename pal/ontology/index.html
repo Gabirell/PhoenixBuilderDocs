@@ -12,11 +12,13 @@
         <meta name="author" content="Gabriel Netto">
       
       
-        <link rel="canonical" href="https://gabirell.github.io/PhoenixBuilderDocs/adr/004_PhoenixArchitecturalLanguage/">
+        <link rel="canonical" href="https://gabirell.github.io/PhoenixBuilderDocs/pal/ontology/">
       
       
-        <link rel="prev" href="../003_BuildingAssetArchitecture/">
+        <link rel="prev" href="../grammar/">
       
+      
+        <link rel="next" href="../rules/">
       
       
         
@@ -27,7 +29,7 @@
     
     
       
-        <title>ADR-004 (PAL Ontology) - Phoenix Builder Documentation</title>
+        <title>4. Core Ontology - Phoenix Builder Documentation</title>
       
     
     
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adr-004-phoenix-architectural-language-pal-ontology" class="md-skip">
+        <a href="#chapter-4-core-foundational-classes" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ADR-004 (PAL Ontology)
+              4. Core Ontology
             
           </span>
         </div>
@@ -268,11 +270,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../pal/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -400,13 +404,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../adr/" class="md-tabs__link">
           
   
   
@@ -1098,6 +1100,8 @@
       
   
   
+    
+  
   
   
     
@@ -1123,22 +1127,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../pal/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1156,13 +1161,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1182,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pal/philosophy/" class="md-nav__link">
+      <a href="../philosophy/" class="md-nav__link">
         
   
   
@@ -1210,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pal/grammar/" class="md-nav__link">
+      <a href="../grammar/" class="md-nav__link">
         
   
   
@@ -1235,10 +1240,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../pal/ontology/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Core Ontology
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1254,6 +1286,447 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-vertical-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Vertical Structures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Vertical Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-wall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Wall
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-column" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Column
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-buttress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Buttress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-pillar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Pillar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-arch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Arch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-horizontal-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Horizontal Structures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Horizontal Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Foundation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-floor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Floor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-ceiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Ceiling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-balcony" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Balcony
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-porch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Porch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-sloped-structures-roofs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Sloped Structures &amp; Roofs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Sloped Structures &amp; Roofs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-roofplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. RoofPlane
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-roofridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. RoofRidge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-roofvalley" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. RoofValley
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-roofhip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. RoofHip
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-eave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5. Eave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-gutter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6. Gutter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-drainpipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7. DrainPipe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-chimney" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8. Chimney
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-openings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Openings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Openings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-door" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Door
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Window
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Gate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-trims-moldings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Trims &amp; Moldings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Trims &amp; Moldings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-baseboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Baseboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-cornice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Cornice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-coving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3. Coving
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-ledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4. Ledge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-molding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5. Molding
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-circulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Circulation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Circulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-stair" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Stair
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-landing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Landing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-handrail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Handrail
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1266,7 +1739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pal/rules/" class="md-nav__link">
+      <a href="../rules/" class="md-nav__link">
         
   
   
@@ -1294,7 +1767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pal/style_system/" class="md-nav__link">
+      <a href="../style_system/" class="md-nav__link">
         
   
   
@@ -1322,7 +1795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pal/constraints/" class="md-nav__link">
+      <a href="../constraints/" class="md-nav__link">
         
   
   
@@ -1804,8 +2277,6 @@
       
   
   
-    
-  
   
   
     
@@ -1827,23 +2298,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../adr/" class="md-nav__link ">
               
   
   
@@ -1861,13 +2331,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1887,7 +2357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../001_PhoenixAssetPhilosophy/" class="md-nav__link">
+      <a href="../../adr/001_PhoenixAssetPhilosophy/" class="md-nav__link">
         
   
   
@@ -1915,7 +2385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../002_ParametricPrimitiveArchitecture/" class="md-nav__link">
+      <a href="../../adr/002_ParametricPrimitiveArchitecture/" class="md-nav__link">
         
   
   
@@ -1943,7 +2413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../003_BuildingAssetArchitecture/" class="md-nav__link">
+      <a href="../../adr/003_BuildingAssetArchitecture/" class="md-nav__link">
         
   
   
@@ -1968,37 +2438,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    ADR-004 (PAL Ontology)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../adr/004_PhoenixArchitecturalLanguage/" class="md-nav__link">
         
   
   
@@ -2014,109 +2457,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#context-problem-statement" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Context &amp; Problem Statement
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#considered-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Considered Options
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Considered Options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-1-code-level-api-traditional-sdk-approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 1: Code-Level API (Traditional SDK approach)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-2-mesh-tags-and-naming-conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 2: Mesh Tags and Naming Conventions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-3-semantic-ontology-phoenix-architectural-language-pal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 3: Semantic Ontology - Phoenix Architectural Language (PAL)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decision-outcome" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Decision Outcome
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#consequences" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Consequences
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2156,33 +2496,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#context-problem-statement" class="md-nav__link">
+  <a href="#1-vertical-structures" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Context &amp; Problem Statement
+        1. Vertical Structures
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#considered-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Considered Options
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Considered Options">
+    <nav class="md-nav" aria-label="1. Vertical Structures">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#option-1-code-level-api-traditional-sdk-approach" class="md-nav__link">
+  <a href="#11-wall" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 1: Code-Level API (Traditional SDK approach)
+        1.1. Wall
       
     </span>
   </a>
@@ -2190,10 +2519,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-2-mesh-tags-and-naming-conventions" class="md-nav__link">
+  <a href="#12-column" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 2: Mesh Tags and Naming Conventions
+        1.2. Column
       
     </span>
   </a>
@@ -2201,10 +2530,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-3-semantic-ontology-phoenix-architectural-language-pal" class="md-nav__link">
+  <a href="#13-buttress" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 3: Semantic Ontology - Phoenix Architectural Language (PAL)
+        1.3. Buttress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-pillar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Pillar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-arch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Arch
       
     </span>
   </a>
@@ -2217,24 +2568,351 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#decision-outcome" class="md-nav__link">
+  <a href="#2-horizontal-structures" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Decision Outcome
+        2. Horizontal Structures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Horizontal Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Foundation
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#consequences" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#22-floor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Consequences
+        2.2. Floor
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-ceiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Ceiling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-balcony" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Balcony
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-porch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Porch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-sloped-structures-roofs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Sloped Structures &amp; Roofs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Sloped Structures &amp; Roofs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-roofplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. RoofPlane
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-roofridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. RoofRidge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-roofvalley" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. RoofValley
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-roofhip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. RoofHip
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-eave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5. Eave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-gutter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6. Gutter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-drainpipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7. DrainPipe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-chimney" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8. Chimney
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-openings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Openings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Openings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-door" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Door
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Window
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Gate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-trims-moldings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Trims &amp; Moldings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Trims &amp; Moldings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-baseboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Baseboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-cornice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Cornice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-coving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3. Coving
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-ledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4. Ledge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-molding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5. Molding
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-circulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Circulation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Circulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-stair" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Stair
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-landing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Landing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-handrail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Handrail
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2255,7 +2933,7 @@
 
 
   
-    <a href="https://github.com/Gabirell/PhoenixBuilderDocs/edit/master/docs/adr/004_PhoenixArchitecturalLanguage.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Gabirell/PhoenixBuilderDocs/edit/master/docs/pal/ontology.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2263,58 +2941,164 @@
   
 
 
-<h1 id="adr-004-phoenix-architectural-language-pal-ontology">ADR-004: Phoenix Architectural Language (PAL) Ontology</h1>
+<h1 id="chapter-4-core-foundational-classes">Chapter 4: Core Foundational Classes</h1>
+<p>This chapter defines the <strong>25 foundational architectural concepts</strong> in the PAL core dictionary. These classes represent the semantic primitives from which any building is assembled.</p>
+<hr />
+<h2 id="1-vertical-structures">1. Vertical Structures</h2>
+<h3 id="11-wall">1.1. <code>Wall</code></h3>
 <ul>
-<li><strong>Status</strong>: Proposed</li>
-<li><strong>Date</strong>: 2026-08-07</li>
-<li><strong>Authors</strong>: Antigravity &amp; Gabriel Netto</li>
-<li><strong>Decisions Superseded</strong>: None (Refines SDK definition to PAL)</li>
+<li><strong>Representation</strong>: Parametric Primitive (<code>.pbp</code>).</li>
+<li><strong>Semantic Role</strong>: The primary vertical structural partition. Manages height, thickness, and footprint coordinates.</li>
+</ul>
+<h3 id="12-column">1.2. <code>Column</code></h3>
+<ul>
+<li><strong>Representation</strong>: Building Asset (<code>.pba</code>) or Parametric (<code>.pbp</code>).</li>
+<li><strong>Semantic Role</strong>: A vertical support shaft transferring load downwards. Snaps between floors or bases.</li>
+</ul>
+<h3 id="13-buttress">1.3. <code>Buttress</code></h3>
+<ul>
+<li><strong>Representation</strong>: Building Asset (<code>.pba</code>).</li>
+<li><strong>Semantic Role</strong>: An exterior lateral support pier reinforcing walls (highly prominent in Gothic and classical architecture).</li>
+</ul>
+<h3 id="14-pillar">1.4. <code>Pillar</code></h3>
+<ul>
+<li><strong>Representation</strong>: Building Asset (<code>.pba</code>).</li>
+<li><strong>Semantic Role</strong>: A heavy square or rectangular vertical structural support.</li>
+</ul>
+<h3 id="15-arch">1.5. <code>Arch</code></h3>
+<ul>
+<li><strong>Representation</strong>: Building Asset (<code>.pba</code>).</li>
+<li><strong>Semantic Role</strong>: A curved structure spanning an opening, serving both structural and decorative purposes.</li>
 </ul>
 <hr />
-<h2 id="context-problem-statement">Context &amp; Problem Statement</h2>
-<p>To bind <strong>Phoenix Forge</strong> (Blender), <strong>Phoenix Builder</strong> (standalone editor), and <strong>Phoenix Engine</strong> (Swift) into a unified platform, they must share a common understanding of what assets are. </p>
-<p>Standard modular kits and game editors classify assets using arbitrary mesh file names (e.g. <code>gothic_wall_left_v3.fbx</code>), naming conventions, or folder structures. This presents several problems for procedural tools:
-1. <strong>No Semantic Rules</strong>: The system has no way of knowing that a mesh represents a "door" and requires a "wall host" to be placed, or that a "cornice" must align along the top edges of a "wall".
-2. <strong>Fragile Snapping</strong>: Snapping relies on mathematical bounding boxes rather than structural alignment rules.
-3. <strong>Rigid Styles</strong>: Changing the visual style of a building (e.g., swapping a cottage window for a gothic window) requires manually replacing each mesh instance rather than updating a styling grammar.</p>
-<p>We need a unified, platform-agnostic way to define the rules, relationships, and capabilities of every architectural component.</p>
-<hr />
-<h2 id="considered-options">Considered Options</h2>
-<h3 id="option-1-code-level-api-traditional-sdk-approach">Option 1: Code-Level API (Traditional SDK approach)</h3>
+<h2 id="2-horizontal-structures">2. Horizontal Structures</h2>
+<h3 id="21-foundation">2.1. <code>Foundation</code></h3>
 <ul>
-<li>We write a Swift library (for Builder/Engine) and a Python library (for Forge/Blender) containing shared functions and data structures.</li>
-<li><strong>Pros</strong>: Safe types, autocomplete support in IDEs, direct runtime execution.</li>
-<li><strong>Cons</strong>: Language locking. If we expand to support Unity (C#) or Godot (C++/GDScript), we must port the entire SDK logic. It mixes software implementation details with pure architectural concepts.</li>
+<li><strong>Representation</strong>: Parametric Primitive (<code>.pbp</code>).</li>
+<li><strong>Semantic Role</strong>: The load-bearing base resting on the terrain. Adapts downward to meet sloped ground.</li>
 </ul>
-<h3 id="option-2-mesh-tags-and-naming-conventions">Option 2: Mesh Tags and Naming Conventions</h3>
+<h3 id="22-floor">2.2. <code>Floor</code></h3>
 <ul>
-<li>We establish naming rules for mesh nodes in Blender (e.g. prefixing sockets with <code>SOCK_</code> or meshes with <code>WALL_</code>).</li>
-<li><strong>Pros</strong>: Simple, zero file-format changes.</li>
-<li><strong>Cons</strong>: Unstructured, highly error-prone, and cannot enforce complex rules (like "a window cannot float in mid-air").</li>
+<li><strong>Representation</strong>: Parametric Primitive (<code>.pbp</code>).</li>
+<li><strong>Semantic Role</strong>: The horizontal walkable surface of a room.</li>
 </ul>
-<h3 id="option-3-semantic-ontology-phoenix-architectural-language-pal">Option 3: Semantic Ontology - Phoenix Architectural Language (PAL)</h3>
+<h3 id="23-ceiling">2.3. <code>Ceiling</code></h3>
 <ul>
-<li>We establish a formal specification dictionary detailing every architectural class (Wall, Door, Window, Column, Cornice) as a semantic concept. </li>
-<li>Every class in PAL defines:</li>
-<li><strong>Inputs &amp; Hosts</strong>: What other classes it attaches to.</li>
-<li><strong>Sockets</strong>: What slots it provides for child elements.</li>
-<li><strong>Behavior Constraints</strong>: Snapping, clearance volumes, and navigation behaviors.</li>
-<li><strong>Pros</strong>:</li>
-<li><strong>Style Independence</strong>: Enables style-swapping at the ontological level (swapping a Victorian Door for a Gothic Door of the same semantic class without altering geometry anchors).</li>
-<li><strong>Tool-Agnostic</strong>: Defines the <em>intent</em> of architecture. Python (Blender), Swift (Builder/Engine), and C# (Unity/Godot) simply implement validators matching this shared ontology.</li>
-<li><strong>True Architecture</strong>: Users design buildings using architectural constructs instead of raw meshes.</li>
-<li><strong>Cons</strong>: Requires documenting and maintaining an extensive class dictionary.</li>
+<li><strong>Representation</strong>: Parametric Primitive (<code>.pbp</code>) or automatically generated under-face of a floor.</li>
+<li><strong>Semantic Role</strong>: The overhead interior surface of a room.</li>
+</ul>
+<h3 id="24-balcony">2.4. <code>Balcony</code></h3>
+<ul>
+<li><strong>Representation</strong>: Building Asset (<code>.pba</code>).</li>
+<li><strong>Semantic Role</strong>: An elevated platform projecting from an exterior wall, requiring structural brackets and handrails.</li>
+</ul>
+<h3 id="25-porch">2.5. <code>Porch</code></h3>
+<ul>
+<li><strong>Representation</strong>: Composite structure.</li>
+<li><strong>Semantic Role</strong>: A covered shelter projecting from the entrance of a building.</li>
 </ul>
 <hr />
-<h2 id="decision-outcome">Decision Outcome</h2>
-<p>We chose <strong>Option 3: Semantic Ontology (PAL)</strong>.</p>
-<p>We will establish the <strong>Phoenix Architectural Language (PAL)</strong> specifications. PAL will be the single canonical index of all architectural classes. Forge, Builder, and Engine will conform to this dictionary.</p>
-<hr />
-<h2 id="consequences">Consequences</h2>
+<h2 id="3-sloped-structures-roofs">3. Sloped Structures &amp; Roofs</h2>
+<h3 id="31-roofplane">3.1. <code>RoofPlane</code></h3>
 <ul>
-<li><strong>Ontological Validation</strong>: Phoenix Forge will read the PAL dictionary to validate exported <code>.pba</code> packages (e.g., checking that a door has a valid hinge socket and clearance metadata).</li>
-<li><strong>Semantic Swapping</strong>: Phoenix Builder can procedurally replace elements (e.g., "Replace all baseboard trims") because Baseboard is a first-class class, not an arbitrary filename.</li>
-<li><strong>Unified Platform Contract</strong>: Future extensions (like District Builder or new game engines) implement PAL specifications rather than low-level layout code.</li>
+<li><strong>Representation</strong>: Parametric Primitive (<code>.pbp</code>).</li>
+<li><strong>Semantic Role</strong>: A sloped surface protecting the top of the structure. Manages slope pitch.</li>
+</ul>
+<h3 id="32-roofridge">3.2. <code>RoofRidge</code></h3>
+<ul>
+<li><strong>Representation</strong>: Trim Line.</li>
+<li><strong>Semantic Role</strong>: The horizontal intersection line at the peak of two sloped roof planes.</li>
+</ul>
+<h3 id="33-roofvalley">3.3. <code>RoofValley</code></h3>
+<ul>
+<li><strong>Representation</strong>: Trim Line.</li>
+<li><strong>Semantic Role</strong>: The sloped concave intersection line where two roof planes meet.</li>
+</ul>
+<h3 id="34-roofhip">3.4. <code>RoofHip</code></h3>
+<ul>
+<li><strong>Representation</strong>: Trim Line.</li>
+<li><strong>Semantic Role</strong>: The sloped convex intersection line extending from the ridge to the eaves.</li>
+</ul>
+<h3 id="35-eave">3.5. <code>Eave</code></h3>
+<ul>
+<li><strong>Representation</strong>: Trim Line.</li>
+<li><strong>Semantic Role</strong>: The bottom overhanging edge of a roof plane.</li>
+</ul>
+<h3 id="36-gutter">3.6. <code>Gutter</code></h3>
+<ul>
+<li><strong>Representation</strong>: Trim Sweep (<code>.pba</code> profile).</li>
+<li><strong>Semantic Role</strong>: A channel running along the eaves to collect rainwater.</li>
+</ul>
+<h3 id="37-drainpipe">3.7. <code>DrainPipe</code></h3>
+<ul>
+<li><strong>Representation</strong>: Building Asset (<code>.pba</code>) or swept curve.</li>
+<li><strong>Semantic Role</strong>: A vertical pipe conveying water from gutters to the ground.</li>
+</ul>
+<h3 id="38-chimney">3.8. <code>Chimney</code></h3>
+<ul>
+<li><strong>Representation</strong>: Building Asset (<code>.pba</code>).</li>
+<li><strong>Semantic Role</strong>: A vertical brick/stone flue venting smoke from hearths.</li>
+</ul>
+<hr />
+<h2 id="4-openings">4. Openings</h2>
+<h3 id="41-door">4.1. <code>Door</code></h3>
+<ul>
+<li><strong>Representation</strong>: Building Asset (<code>.pba</code>).</li>
+<li><strong>Semantic Role</strong>: A swappable barrier blocking or allowing movement through a wall. Requires hinge and clearance metadata.</li>
+</ul>
+<h3 id="42-window">4.2. <code>Window</code></h3>
+<ul>
+<li><strong>Representation</strong>: Building Asset (<code>.pba</code>).</li>
+<li><strong>Semantic Role</strong>: An aperture in a wall or roof plane designed to admit light and air.</li>
+</ul>
+<h3 id="43-gate">4.3. <code>Gate</code></h3>
+<ul>
+<li><strong>Representation</strong>: Building Asset (<code>.pba</code>).</li>
+<li><strong>Semantic Role</strong>: A large exterior double-leaf opening barrier (used in courtyards or fortresses).</li>
+</ul>
+<hr />
+<h2 id="5-trims-moldings">5. Trims &amp; Moldings</h2>
+<h3 id="51-baseboard">5.1. <code>Baseboard</code></h3>
+<ul>
+<li><strong>Representation</strong>: Trim Sweep.</li>
+<li><strong>Semantic Role</strong>: A decorative molding running along the bottom interior edge of walls.</li>
+</ul>
+<h3 id="52-cornice">5.2. <code>Cornice</code></h3>
+<ul>
+<li><strong>Representation</strong>: Trim Sweep.</li>
+<li><strong>Semantic Role</strong>: An ornamental molding crown running along the top exterior edge of walls.</li>
+</ul>
+<h3 id="53-coving">5.3. <code>Coving</code></h3>
+<ul>
+<li><strong>Representation</strong>: Trim Sweep.</li>
+<li><strong>Semantic Role</strong>: An ornamental concave profile transitioning between interior walls and ceilings.</li>
+</ul>
+<h3 id="54-ledge">5.4. <code>Ledge</code></h3>
+<ul>
+<li><strong>Representation</strong>: Trim Sweep or Building Asset (<code>.pba</code>).</li>
+<li><strong>Semantic Role</strong>: A horizontal stone or wood projection forming a shelf along a wall facade.</li>
+</ul>
+<h3 id="55-molding">5.5. <code>Molding</code></h3>
+<ul>
+<li><strong>Representation</strong>: Trim Sweep.</li>
+<li><strong>Semantic Role</strong>: General linear profile sweep applied to panel joints or boundaries.</li>
+</ul>
+<hr />
+<h2 id="6-circulation">6. Circulation</h2>
+<h3 id="61-stair">6.1. <code>Stair</code></h3>
+<ul>
+<li><strong>Representation</strong>: Parametric Primitive (<code>.pbp</code>) or static <code>.pba</code>.</li>
+<li><strong>Semantic Role</strong>: A series of steps allowing vertical transit.</li>
+</ul>
+<h3 id="62-landing">6.2. <code>Landing</code></h3>
+<ul>
+<li><strong>Representation</strong>: Horizontal platform.</li>
+<li><strong>Semantic Role</strong>: An intermediate flat platform between stair flights.</li>
+</ul>
+<h3 id="63-handrail">6.3. <code>Handrail</code></h3>
+<ul>
+<li><strong>Representation</strong>: Trim Sweep or modular <code>.pba</code>.</li>
+<li><strong>Semantic Role</strong>: A protective barrier and grip running along stairs and balconies.</li>
 </ul>
 
 

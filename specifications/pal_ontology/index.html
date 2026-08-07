@@ -12,31 +12,31 @@
         <meta name="author" content="Gabriel Netto">
       
       
-        <link rel="canonical" href="https://gabirell.github.io/PhoenixBuilderDocs/engine/">
+        <link rel="canonical" href="https://gabirell.github.io/PhoenixBuilderDocs/specifications/pal_ontology/">
       
       
-        <link rel="prev" href="../builder/">
+        <link rel="prev" href="../pba_format/">
       
       
-        <link rel="next" href="../tutorials/">
+        <link rel="next" href="../../forge/">
       
       
         
       
       
-      <link rel="icon" href="../images/favicon.png">
+      <link rel="icon" href="../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Overview - Phoenix Builder Documentation</title>
+        <title>PHX-SPEC-003 (PAL Ontology) - Phoenix Builder Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#phoenix-engine-documentation" class="md-skip">
+        <a href="#phx-spec-003-phoenix-architectural-language-pal-core-ontology" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Phoenix Builder Documentation" class="md-header__button md-logo" aria-label="Phoenix Builder Documentation" data-md-component="logo">
+    <a href="../.." title="Phoenix Builder Documentation" class="md-header__button md-logo" aria-label="Phoenix Builder Documentation" data-md-component="logo">
       
-  <img src="../images/logo.png" alt="logo">
+  <img src="../../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              PHX-SPEC-003 (PAL Ontology)
             
           </span>
         </div>
@@ -231,7 +231,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -252,7 +252,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../design-bible/PhoenixManifesto/" class="md-tabs__link">
+        <a href="../../design-bible/PhoenixManifesto/" class="md-tabs__link">
           
   
   
@@ -274,7 +274,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../sdk/00_PhoenixSDKOverview/" class="md-tabs__link">
+        <a href="../../sdk/00_PhoenixSDKOverview/" class="md-tabs__link">
           
   
   
@@ -292,11 +292,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../specifications/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -318,7 +320,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../forge/" class="md-tabs__link">
+        <a href="../../forge/" class="md-tabs__link">
           
   
   
@@ -340,7 +342,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../builder/" class="md-tabs__link">
+        <a href="../../builder/" class="md-tabs__link">
           
   
   
@@ -358,13 +360,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../engine/" class="md-tabs__link">
           
   
   
@@ -386,7 +386,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../tutorials/" class="md-tabs__link">
+        <a href="../../tutorials/" class="md-tabs__link">
           
   
   
@@ -408,7 +408,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../adr/" class="md-tabs__link">
+        <a href="../../adr/" class="md-tabs__link">
           
   
   
@@ -444,9 +444,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Phoenix Builder Documentation" class="md-nav__button md-logo" aria-label="Phoenix Builder Documentation" data-md-component="logo">
+    <a href="../.." title="Phoenix Builder Documentation" class="md-nav__button md-logo" aria-label="Phoenix Builder Documentation" data-md-component="logo">
       
-  <img src="../images/logo.png" alt="logo">
+  <img src="../../images/logo.png" alt="logo">
 
     </a>
     Phoenix Builder Documentation
@@ -473,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -592,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/PhoenixManifesto/" class="md-nav__link">
+      <a href="../../design-bible/PhoenixManifesto/" class="md-nav__link">
         
   
   
@@ -620,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/00_Index/" class="md-nav__link">
+      <a href="../../design-bible/00_Index/" class="md-nav__link">
         
   
   
@@ -648,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/01_Vision/" class="md-nav__link">
+      <a href="../../design-bible/01_Vision/" class="md-nav__link">
         
   
   
@@ -676,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/02_Philosophy/" class="md-nav__link">
+      <a href="../../design-bible/02_Philosophy/" class="md-nav__link">
         
   
   
@@ -704,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/03_UserExperience/" class="md-nav__link">
+      <a href="../../design-bible/03_UserExperience/" class="md-nav__link">
         
   
   
@@ -732,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/04_Interface/" class="md-nav__link">
+      <a href="../../design-bible/04_Interface/" class="md-nav__link">
         
   
   
@@ -760,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/05_BuildingWorkflow/" class="md-nav__link">
+      <a href="../../design-bible/05_BuildingWorkflow/" class="md-nav__link">
         
   
   
@@ -788,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/06_ArchitecturalSurfaceSystem/" class="md-nav__link">
+      <a href="../../design-bible/06_ArchitecturalSurfaceSystem/" class="md-nav__link">
         
   
   
@@ -816,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/07_ConstructionGrammar/" class="md-nav__link">
+      <a href="../../design-bible/07_ConstructionGrammar/" class="md-nav__link">
         
   
   
@@ -844,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/08_AssemblyEngine/" class="md-nav__link">
+      <a href="../../design-bible/08_AssemblyEngine/" class="md-nav__link">
         
   
   
@@ -872,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/09_AssetEcosystem/" class="md-nav__link">
+      <a href="../../design-bible/09_AssetEcosystem/" class="md-nav__link">
         
   
   
@@ -900,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/10_BuildingDNA/" class="md-nav__link">
+      <a href="../../design-bible/10_BuildingDNA/" class="md-nav__link">
         
   
   
@@ -928,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/11_ProceduralArchitecture/" class="md-nav__link">
+      <a href="../../design-bible/11_ProceduralArchitecture/" class="md-nav__link">
         
   
   
@@ -956,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/12_RenderingAndViewport/" class="md-nav__link">
+      <a href="../../design-bible/12_RenderingAndViewport/" class="md-nav__link">
         
   
   
@@ -984,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/13_ExportProfiles/" class="md-nav__link">
+      <a href="../../design-bible/13_ExportProfiles/" class="md-nav__link">
         
   
   
@@ -1012,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/14_PhoenixIntegration/" class="md-nav__link">
+      <a href="../../design-bible/14_PhoenixIntegration/" class="md-nav__link">
         
   
   
@@ -1040,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/15_Roadmap/" class="md-nav__link">
+      <a href="../../design-bible/15_Roadmap/" class="md-nav__link">
         
   
   
@@ -1068,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-bible/16_DecisionLog/" class="md-nav__link">
+      <a href="../../design-bible/16_DecisionLog/" class="md-nav__link">
         
   
   
@@ -1161,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sdk/00_PhoenixSDKOverview/" class="md-nav__link">
+      <a href="../../sdk/00_PhoenixSDKOverview/" class="md-nav__link">
         
   
   
@@ -1193,6 +1193,8 @@
       
   
   
+    
+  
   
   
     
@@ -1212,22 +1214,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../specifications/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1245,13 +1248,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1271,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../specifications/pbp_format/" class="md-nav__link">
+      <a href="../pbp_format/" class="md-nav__link">
         
   
   
@@ -1299,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../specifications/pba_format/" class="md-nav__link">
+      <a href="../pba_format/" class="md-nav__link">
         
   
   
@@ -1324,10 +1327,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../specifications/pal_ontology/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PHX-SPEC-003 (PAL Ontology)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1343,6 +1373,221 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-pal-ontology-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The PAL Ontology Taxonomy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-element-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Element Specifications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Element Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-structural-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Structural Elements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Structural Elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-wall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Wall
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-floor-ceiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Floor / Ceiling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-roofplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: RoofPlane
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-structural-openings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Structural Openings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Structural Openings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-door" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Door
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Window
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-trims-moldings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Trims &amp; Moldings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Trims &amp; Moldings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-cornice-baseboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Cornice / Baseboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-fixtures-appendages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Fixtures &amp; Appendages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Fixtures &amp; Appendages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-column-pillar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Column / Pillar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-the-style-system-semantic-swapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. The Style System &amp; Semantic Swapping
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1387,7 +1632,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../forge/" class="md-nav__link ">
+            <a href="../../forge/" class="md-nav__link ">
               
   
   
@@ -1458,7 +1703,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../builder/" class="md-nav__link ">
+            <a href="../../builder/" class="md-nav__link ">
               
   
   
@@ -1501,8 +1746,6 @@
       
   
   
-    
-  
   
   
     
@@ -1516,23 +1759,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../engine/" class="md-nav__link ">
               
   
   
@@ -1551,7 +1793,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1603,7 +1845,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tutorials/" class="md-nav__link ">
+            <a href="../../tutorials/" class="md-nav__link ">
               
   
   
@@ -1682,7 +1924,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../adr/" class="md-nav__link ">
+            <a href="../../adr/" class="md-nav__link ">
               
   
   
@@ -1726,7 +1968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adr/001_PhoenixAssetPhilosophy/" class="md-nav__link">
+      <a href="../../adr/001_PhoenixAssetPhilosophy/" class="md-nav__link">
         
   
   
@@ -1754,7 +1996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adr/002_ParametricPrimitiveArchitecture/" class="md-nav__link">
+      <a href="../../adr/002_ParametricPrimitiveArchitecture/" class="md-nav__link">
         
   
   
@@ -1782,7 +2024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adr/003_BuildingAssetArchitecture/" class="md-nav__link">
+      <a href="../../adr/003_BuildingAssetArchitecture/" class="md-nav__link">
         
   
   
@@ -1810,7 +2052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adr/004_PhoenixArchitecturalLanguage/" class="md-nav__link">
+      <a href="../../adr/004_PhoenixArchitecturalLanguage/" class="md-nav__link">
         
   
   
@@ -1865,10 +2107,194 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#role-in-the-ecosystem" class="md-nav__link">
+  <a href="#1-introduction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Role in the Ecosystem
+        1. Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-pal-ontology-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The PAL Ontology Taxonomy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-element-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Element Specifications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Element Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-structural-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Structural Elements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Structural Elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-wall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Wall
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-floor-ceiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Floor / Ceiling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-roofplane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: RoofPlane
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-structural-openings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Structural Openings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Structural Openings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-door" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Door
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Window
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-trims-moldings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Trims &amp; Moldings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Trims &amp; Moldings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-cornice-baseboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Cornice / Baseboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-fixtures-appendages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Fixtures &amp; Appendages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Fixtures &amp; Appendages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-column-pillar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class: Column / Pillar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-the-style-system-semantic-swapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. The Style System &amp; Semantic Swapping
       
     </span>
   </a>
@@ -1892,7 +2318,7 @@
 
 
   
-    <a href="https://github.com/Gabirell/PhoenixBuilderDocs/edit/master/docs/engine/README.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Gabirell/PhoenixBuilderDocs/edit/master/docs/specifications/pal_ontology.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1900,15 +2326,127 @@
   
 
 
-<h1 id="phoenix-engine-documentation">Phoenix Engine Documentation</h1>
-<p>Phoenix Engine is a custom Swift game engine that runs game levels built using the Phoenix Ecosystem.</p>
-<h2 id="role-in-the-ecosystem">Role in the Ecosystem</h2>
+<h1 id="phx-spec-003-phoenix-architectural-language-pal-core-ontology">PHX-SPEC-003: Phoenix Architectural Language (PAL) Core Ontology</h1>
 <ul>
-<li><strong>Runtime rendering</strong>: Consume and render compiled primitives and building assets.</li>
-<li><strong>Semantic execution</strong>: Interact with the architectural semantic metadata in-game.</li>
-<li><strong>Validation</strong>: Run production scenarios (e.g., in the validation game HowNotToDie) to test and validate builder mechanics.</li>
+<li><strong>Status</strong>: Draft (Proposed)</li>
+<li><strong>Target Version</strong>: 1.0.0</li>
+<li><strong>Format</strong>: Specification Document</li>
 </ul>
-<p><em>Detailed engine architecture guides and developer references will be added here.</em></p>
+<hr />
+<h2 id="1-introduction">1. Introduction</h2>
+<p>The <strong>Phoenix Architectural Language (PAL)</strong> is the unified semantic dictionary of the Phoenix Ecosystem. Rather than thinking of architectural assets as arbitrary 3D meshes or polygons, all components are classified under first-class architectural concepts. </p>
+<p>This shared vocabulary allows <strong>Phoenix Forge</strong> (Blender) to validate exported metadata, <strong>Phoenix Builder</strong> to perform style family swaps (e.g. Victorian vs. Gothic) and auto-align assets, and <strong>Phoenix Engine</strong> to understand structural relationships at runtime.</p>
+<hr />
+<h2 id="2-the-pal-ontology-taxonomy">2. The PAL Ontology Taxonomy</h2>
+<p>Every element in a scene belongs to one of four semantic super-classes:</p>
+<div class="highlight"><pre><span></span><code>                            PAL ELEMENT
+                                 │
+         ┌───────────────┬───────┴───────┬──────────────┐
+         ▼               ▼               ▼              ▼
+    Structural       Openings          Trims        Fixtures
+   (Skeletons)      (Cut-outs)     (Transitions)  (Attachments)
+</code></pre></div>
+<ol>
+<li><strong>Structural Elements</strong>: Forms the bounding geometry of the structure. Usually represented as parametric primitives (<code>.pbp</code>).</li>
+<li><strong>Openings</strong>: Intersect with Structural elements, modifying their physical geometry (punching holes).</li>
+<li><strong>Trims &amp; Moldings</strong>: Linear decorative pieces extruded or swept along primitive edges or borders.</li>
+<li><strong>Fixtures &amp; Elements</strong>: Individual detailed objects snapped onto defined sockets.</li>
+</ol>
+<hr />
+<h2 id="3-element-specifications">3. Element Specifications</h2>
+<h3 id="31-structural-elements">3.1. Structural Elements</h3>
+<h4 id="class-wall">Class: <code>Wall</code></h4>
+<ul>
+<li><strong>Representation</strong>: Typically a Parametric Primitive (<code>.pbp</code>).</li>
+<li><strong>Placement Rules</strong>: Must start and end at horizontal coordinates. Can snap vertically onto a <code>Foundation</code> or <code>Floor</code>.</li>
+<li><strong>Standard Sockets</strong>:</li>
+<li><code>exterior_baseboard</code> / <code>interior_baseboard</code>: Runs along the bottom edge.</li>
+<li><code>coving</code>: Runs along the top interior edge.</li>
+<li><code>cornice</code>: Runs along the top exterior edge.</li>
+<li><code>opening_mount</code>: Generic socket accommodating <code>Door</code> or <code>Window</code> openings.</li>
+<li><strong>Capabilities</strong>:</li>
+<li><strong>Auto-Join</strong>: Detects neighboring walls within snap distance and merges intersections (butt joints or miter joints).</li>
+<li><strong>Boolean Cutouts</strong>: Subtracts the bounding volume of host openings from its geometry.</li>
+</ul>
+<h4 id="class-floor-ceiling">Class: <code>Floor</code> / <code>Ceiling</code></h4>
+<ul>
+<li><strong>Representation</strong>: Parametric footprint polygon.</li>
+<li><strong>Placement Rules</strong>: Must lie on a horizontal plane.</li>
+<li><strong>Standard Sockets</strong>:</li>
+<li><code>column_socket</code>: Grid intersections for vertical columns.</li>
+<li><code>stairwell</code>: Subtracts geometry to allow stair passage.</li>
+</ul>
+<h4 id="class-roofplane">Class: <code>RoofPlane</code></h4>
+<ul>
+<li><strong>Representation</strong>: Parametric sloped plane.</li>
+<li><strong>Standard Sockets</strong>:</li>
+<li><code>ridge_socket</code>: Top horizontal intersection.</li>
+<li><code>valley_socket</code>: Concave slope intersection.</li>
+<li><code>gutter_socket</code>: Bottom eave edge.</li>
+</ul>
+<hr />
+<h3 id="32-structural-openings">3.2. Structural Openings</h3>
+<h4 id="class-door">Class: <code>Door</code></h4>
+<ul>
+<li><strong>Representation</strong>: Artist-authored Building Asset (<code>.pba</code>).</li>
+<li><strong>Placement Rules</strong>: Requires a <code>DoorOpening</code> socket on a <code>Wall</code> primitive. Cannot exist floating.</li>
+<li><strong>Required Sockets (in asset)</strong>:</li>
+<li><code>hinge</code>: Coordinates for rotational pivot.</li>
+<li><code>handle</code>: Interaction anchor.</li>
+<li><strong>Capabilities</strong>:</li>
+<li><strong>Clearance Volume</strong>: Defines a sweeping bounding box constraint. Builder checks this area against surrounding meshes to ensure the door can open without clipping objects.</li>
+<li><strong>Interaction Metadata</strong>: Exposes properties like <code>locked</code>, <code>swing_angle</code>, and <code>open_direction</code> (left, right, dual) to the engine.</li>
+</ul>
+<h4 id="class-window">Class: <code>Window</code></h4>
+<ul>
+<li><strong>Representation</strong>: Artist-authored Building Asset (<code>.pba</code>).</li>
+<li><strong>Placement Rules</strong>: Requires a <code>WindowOpening</code> socket on a <code>Wall</code> or <code>RoofPlane</code>.</li>
+<li><strong>Standard Sockets</strong>:</li>
+<li><code>shutter</code>: Mounts for shutters on left/right edges.</li>
+<li><code>flowerbox</code>: Mounts at the bottom exterior ledge.</li>
+<li><strong>Capabilities</strong>:</li>
+<li><strong>Aperture Scaling</strong>: Can adapt to host opening sizes through standard scaling constraints defined in the asset's metadata.</li>
+</ul>
+<hr />
+<h3 id="33-trims-moldings">3.3. Trims &amp; Moldings</h3>
+<h4 id="class-cornice-baseboard">Class: <code>Cornice</code> / <code>Baseboard</code></h4>
+<ul>
+<li><strong>Representation</strong>: Profile curve template swept along a line.</li>
+<li><strong>Placement Rules</strong>: Attaches along the top exterior edges (<code>Cornice</code>) or bottom edges (<code>Baseboard</code>) of a <code>Wall</code>.</li>
+<li><strong>Capabilities</strong>:</li>
+<li><strong>Corner Mitering</strong>: Automatically calculates 45-degree angle joints at wall intersections.</li>
+<li><strong>Texture Alignment</strong>: Forces UV mapping along the direction of the sweep to ensure wood grain or stone patterns align correctly.</li>
+</ul>
+<hr />
+<h3 id="34-fixtures-appendages">3.4. Fixtures &amp; Appendages</h3>
+<h4 id="class-column-pillar">Class: <code>Column</code> / <code>Pillar</code></h4>
+<ul>
+<li><strong>Representation</strong>: Parametric or static <code>.pba</code>.</li>
+<li><strong>Placement Rules</strong>: Instantiates between a Floor socket and a Ceiling socket.</li>
+<li><strong>Standard Sockets</strong>:</li>
+<li><code>cap</code>: Structural intersection at top.</li>
+<li><code>base</code>: Intersection at bottom.</li>
+</ul>
+<hr />
+<h2 id="4-the-style-system-semantic-swapping">4. The Style System &amp; Semantic Swapping</h2>
+<p>Because elements are categorized semantically, a <strong>Style Family</strong> (e.g. <code>gothic_medieval</code> or <code>deco_high_society</code>) consists of a collection of recipes and <code>.pba</code> mappings:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;style_family_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gothic_stone_01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;mappings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Wall&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;default_surface_recipe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;recipe_rough_stone_slate&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;Window&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;default_asset&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;window_gothic_arched_double&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;Cornice&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;profile_template&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;profile_gothic_cove_01&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;surface_recipe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;recipe_weathered_granite&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>When a user instructs Builder to <strong>"Apply Style: gothic_stone_01"</strong>, Builder iterates through the ontology nodes of the building and replaces assets based on these semantic map rules, leaving the building's layout, socket attachments, and structural dimensions untouched.</p>
 
 
 
@@ -1980,10 +2518,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

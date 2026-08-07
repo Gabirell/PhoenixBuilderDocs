@@ -37,4 +37,4 @@ Before implementing any feature, follow this engineering process:
 5. **Implement**: Implement the feature in code.
 6. **Document**: Document the final implementation details.
 
-For full context, refer to [AI_CONTEXT.md](file:///Users/gabrielnetto/Documents/Programaciones/Phoenix/PhoenixBuilderDocs/AI_CONTEXT.md).
+For full context, refer to [AI_CONTEXT.md](file:///Users/gabrielnetto/Documents/Programaciones/PhoenixEcosystem/PhoenixBuilderDocs/AI_CONTEXT.md).

@@ -112,6 +112,7 @@ nav:
 
   - Specifications:
       - Specifications Index: specifications/README.md
+      - PHX-MVP-001 (First House): specifications/PHX-MVP-001_FirstHouse.md
       - PHX-SPEC-001 (Primitives): specifications/pbp_format.md
       - PHX-SPEC-002 (Building Assets): specifications/pba_format.md
       - PHX-SPEC-003 (PAL Ontology): specifications/pal_ontology.md

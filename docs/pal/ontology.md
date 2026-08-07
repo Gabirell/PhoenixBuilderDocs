@@ -2,6 +2,9 @@
 
 This chapter defines the **25 foundational architectural concepts** in the PAL core dictionary. These classes represent the semantic primitives from which any building is assembled.
 
+> [!IMPORTANT]
+> For **Milestone 1: First House**, we only implement the 5 core classes: `Wall`, `Floor`, `Roof`, `Door`, and `Window`. All other classes are currently deferred to the LATER backlog (Anti-Five-Year Shield).
+
 ---
 
 ## 1. Vertical Structures

@@ -4,6 +4,9 @@
 * **Target Version**: 1.0.0
 * **Format**: Specification Document
 
+> [!NOTE]
+> For **Milestone 1: First House**, we only implement a subset of 5 classes (Wall, Floor, Roof, Door, Window) using a simplified schema. See [PHX-MVP-001](PHX-MVP-001_FirstHouse.md) for details.
+
 ---
 
 ## 1. Introduction

@@ -4,6 +4,9 @@
 * **File Extension**: `.pbp`
 * **Format**: UTF-8 Encoded JSON
 
+> [!NOTE]
+> For **Milestone 1: First House**, we use a simplified version of this format. See [PHX-MVP-001](PHX-MVP-001_FirstHouse.md) for the exact MVP schema properties.
+
 ---
 
 ## 1. Overview

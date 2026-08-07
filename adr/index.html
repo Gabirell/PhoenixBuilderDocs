@@ -12,31 +12,29 @@
         <meta name="author" content="Gabriel Netto">
       
       
-        <link rel="canonical" href="https://gabirell.github.io/PhoenixBuilderDocs/design-bible/06_ArchitecturalSurfaceSystem/">
+        <link rel="canonical" href="https://gabirell.github.io/PhoenixBuilderDocs/adr/">
       
       
-        <link rel="prev" href="../05_BuildingWorkflow/">
+        <link rel="prev" href="../design-bible/16_DecisionLog/">
       
-      
-        <link rel="next" href="../07_ConstructionGrammar/">
       
       
         
       
       
-      <link rel="icon" href="../../images/favicon.png">
+      <link rel="icon" href="../images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>06 Architectural Surface System - Phoenix Builder Documentation</title>
+        <title>ADR Index - Phoenix Builder Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#phoenix-builder-design-bible" class="md-skip">
+        <a href="#architectural-decision-records-adrs" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +92,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Phoenix Builder Documentation" class="md-header__button md-logo" aria-label="Phoenix Builder Documentation" data-md-component="logo">
+    <a href=".." title="Phoenix Builder Documentation" class="md-header__button md-logo" aria-label="Phoenix Builder Documentation" data-md-component="logo">
       
-  <img src="../../images/logo.png" alt="logo">
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              06 Architectural Surface System
+              ADR Index
             
           </span>
         </div>
@@ -231,7 +229,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href=".." class="md-tabs__link">
         
   
   
@@ -252,7 +250,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../PhoenixManifesto/" class="md-tabs__link">
+        <a href="../design-bible/PhoenixManifesto/" class="md-tabs__link">
           
   
   
@@ -270,13 +268,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../00_Index/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../design-bible/00_Index/" class="md-tabs__link">
           
   
   
@@ -298,7 +294,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../sdk/00_PhoenixSDKOverview.md" class="md-tabs__link">
+        <a href="../sdk/00_PhoenixSDKOverview.md" class="md-tabs__link">
           
   
   
@@ -316,11 +312,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../adr/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -356,9 +354,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Phoenix Builder Documentation" class="md-nav__button md-logo" aria-label="Phoenix Builder Documentation" data-md-component="logo">
+    <a href=".." title="Phoenix Builder Documentation" class="md-nav__button md-logo" aria-label="Phoenix Builder Documentation" data-md-component="logo">
       
-  <img src="../../images/logo.png" alt="logo">
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     Phoenix Builder Documentation
@@ -385,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -470,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PhoenixManifesto/" class="md-nav__link">
+      <a href="../design-bible/PhoenixManifesto/" class="md-nav__link">
         
   
   
@@ -502,10 +500,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -547,22 +543,21 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -580,7 +575,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -598,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00_Index/" class="md-nav__link">
+      <a href="../design-bible/00_Index/" class="md-nav__link">
         
   
   
@@ -626,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_Vision/" class="md-nav__link">
+      <a href="../design-bible/01_Vision/" class="md-nav__link">
         
   
   
@@ -654,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_Philosophy/" class="md-nav__link">
+      <a href="../design-bible/02_Philosophy/" class="md-nav__link">
         
   
   
@@ -682,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_UserExperience/" class="md-nav__link">
+      <a href="../design-bible/03_UserExperience/" class="md-nav__link">
         
   
   
@@ -710,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04_Interface/" class="md-nav__link">
+      <a href="../design-bible/04_Interface/" class="md-nav__link">
         
   
   
@@ -738,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_BuildingWorkflow/" class="md-nav__link">
+      <a href="../design-bible/05_BuildingWorkflow/" class="md-nav__link">
         
   
   
@@ -763,37 +758,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    06 Architectural Surface System
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../design-bible/06_ArchitecturalSurfaceSystem/" class="md-nav__link">
         
   
   
@@ -809,37 +777,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#06_architecturalsurfacesystemmd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        06_ArchitecturalSurfaceSystem.md
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -852,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07_ConstructionGrammar/" class="md-nav__link">
+      <a href="../design-bible/07_ConstructionGrammar/" class="md-nav__link">
         
   
   
@@ -880,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08_AssemblyEngine/" class="md-nav__link">
+      <a href="../design-bible/08_AssemblyEngine/" class="md-nav__link">
         
   
   
@@ -908,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_AssetEcosystem/" class="md-nav__link">
+      <a href="../design-bible/09_AssetEcosystem/" class="md-nav__link">
         
   
   
@@ -936,7 +873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10_BuildingDNA/" class="md-nav__link">
+      <a href="../design-bible/10_BuildingDNA/" class="md-nav__link">
         
   
   
@@ -964,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../11_ProceduralArchitecture/" class="md-nav__link">
+      <a href="../design-bible/11_ProceduralArchitecture/" class="md-nav__link">
         
   
   
@@ -992,7 +929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../12_RenderingAndViewport/" class="md-nav__link">
+      <a href="../design-bible/12_RenderingAndViewport/" class="md-nav__link">
         
   
   
@@ -1020,7 +957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../13_ExportProfiles/" class="md-nav__link">
+      <a href="../design-bible/13_ExportProfiles/" class="md-nav__link">
         
   
   
@@ -1048,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../14_PhoenixIntegration/" class="md-nav__link">
+      <a href="../design-bible/14_PhoenixIntegration/" class="md-nav__link">
         
   
   
@@ -1076,7 +1013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../15_Roadmap/" class="md-nav__link">
+      <a href="../design-bible/15_Roadmap/" class="md-nav__link">
         
   
   
@@ -1104,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../16_DecisionLog/" class="md-nav__link">
+      <a href="../design-bible/16_DecisionLog/" class="md-nav__link">
         
   
   
@@ -1197,7 +1134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sdk/00_PhoenixSDKOverview.md" class="md-nav__link">
+      <a href="../sdk/00_PhoenixSDKOverview.md" class="md-nav__link">
         
   
   
@@ -1229,6 +1166,8 @@
       
   
   
+    
+  
   
   
     
@@ -1242,22 +1181,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../adr/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   
@@ -1276,7 +1216,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1323,10 +1263,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#06_architecturalsurfacesystemmd" class="md-nav__link">
+  <a href="#adr-template" class="md-nav__link">
     <span class="md-ellipsis">
       
-        06_ArchitecturalSurfaceSystem.md
+        ADR Template
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR Index
       
     </span>
   </a>
@@ -1350,7 +1301,7 @@
 
 
   
-    <a href="https://github.com/Gabirell/PhoenixBuilderDocs/edit/master/docs/design-bible/06_ArchitecturalSurfaceSystem.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Gabirell/PhoenixBuilderDocs/edit/master/docs/adr/README.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1358,248 +1309,50 @@
   
 
 
-<h1 id="phoenix-builder-design-bible">Phoenix Builder Design Bible</h1>
-<h2 id="06_architecturalsurfacesystemmd">06_ArchitecturalSurfaceSystem.md</h2>
-<p>Version: 2.0.0
-Status: Draft</p>
-<hr />
-<h1 id="architectural-surface-system">Architectural Surface System</h1>
-<p>One of Phoenix Builder's defining ideas is the complete separation between:</p>
-<p>Architecture</p>
-<p>and</p>
-<p>Appearance.</p>
-<p>Buildings define architecture.</p>
-<p>Surfaces define appearance.</p>
-<p>This separation allows the same building to become:</p>
-<p>• Medieval</p>
-<p>• Victorian</p>
-<p>• Japanese</p>
-<p>• Sci-Fi</p>
-<p>• Industrial</p>
-<p>without rebuilding geometry.</p>
-<hr />
-<h1 id="surface-philosophy">Surface Philosophy</h1>
-<p>Traditional workflows usually assign materials directly to meshes.</p>
-<p>Phoenix Builder does not.</p>
-<p>Instead it assigns architectural meaning.</p>
-<p>For example:</p>
-<p>Wall</p>
-<p>↓</p>
-<p>Bottom Edge</p>
-<p>Main Surface</p>
-<p>Corners</p>
-<p>Window Frames</p>
-<p>Top Cornice</p>
-<p>Weather Layer</p>
-<p>Damage Layer</p>
-<p>Instead of thinking about UV islands, users think about architectural parts.</p>
-<hr />
-<h1 id="architectural-regions">Architectural Regions</h1>
-<p>Every intelligent asset contains semantic regions.</p>
-<p>Example:</p>
-<p>Wall</p>
-<p>• Foundation</p>
-<p>• Main Surface</p>
-<p>• Window Area</p>
-<p>• Door Area</p>
-<p>• Trim</p>
-<p>• Cornice</p>
-<p>• Side Edge</p>
-<p>• Bottom Edge</p>
-<p>• Top Edge</p>
-<p>These regions become the targets for every future operation.</p>
-<hr />
-<h1 id="surface-layers">Surface Layers</h1>
-<p>Each region supports multiple independent layers.</p>
-<p>Example:</p>
-<p>Brick</p>
-<p>↓</p>
-<p>Paint</p>
-<p>↓</p>
-<p>Dust</p>
-<p>↓</p>
-<p>Leaks</p>
-<p>↓</p>
-<p>Moss</p>
-<p>↓</p>
-<p>Snow</p>
-<p>↓</p>
-<p>Graffiti</p>
-<p>↓</p>
-<p>Bullet Holes</p>
-<p>↓</p>
-<p>Posters</p>
-<p>↓</p>
-<p>Decals</p>
-<p>Each layer remains editable.</p>
-<p>No layer permanently alters another.</p>
-<hr />
-<h1 id="surface-recipes">Surface Recipes</h1>
-<p>A Surface Recipe defines the complete appearance of a region.</p>
-<p>Example</p>
-<p>Old Painted Brick</p>
-<p>Brick Material</p>
-<p>↓</p>
-<p>White Paint</p>
-<p>↓</p>
-<p>Edge Wear</p>
-<p>↓</p>
-<p>Rain Leaks</p>
-<p>↓</p>
-<p>Moss</p>
-<p>↓</p>
-<p>Dust</p>
-<p>↓</p>
-<p>Small Cracks</p>
-<p>↓</p>
-<p>AO Enhancement</p>
-<p>↓</p>
-<p>Micro Decals</p>
-<p>Instead of manually creating every material, users simply apply a recipe.</p>
-<hr />
-<h1 id="trim-templates">Trim Templates</h1>
-<p>Trim Sheets remain extremely important.</p>
-<p>However, Phoenix Builder treats them as implementation details.</p>
-<p>A Trim Template defines:</p>
-<p>• Trim Regions</p>
-<p>• UV Rules</p>
-<p>• Scaling Rules</p>
-<p>• Orientation</p>
-<p>• Rotation Constraints</p>
-<p>• Seam Rules</p>
-<p>Users rarely interact directly with UV coordinates.</p>
-<hr />
-<h1 id="intelligent-trim-assignment">Intelligent Trim Assignment</h1>
-<p>When a wall is placed, Phoenix Builder automatically decides:</p>
-<p>Which trim should be used.</p>
-<p>Which orientation fits.</p>
-<p>Whether mirroring is allowed.</p>
-<p>Whether stretching is acceptable.</p>
-<p>Whether repeating is preferable.</p>
-<p>Users may override every decision.</p>
-<hr />
-<h1 id="tileable-materials">Tileable Materials</h1>
-<p>Large surfaces rarely require unique textures.</p>
-<p>Instead they use:</p>
-<p>Tileable PBR Materials.</p>
-<p>These may include:</p>
-<p>Brick</p>
-<p>Stone</p>
-<p>Concrete</p>
-<p>Wood</p>
-<p>Tiles</p>
-<p>Metal</p>
-<p>Plaster</p>
-<p>Everything is controlled by Surface Recipes.</p>
-<hr />
-<h1 id="decal-system">Decal System</h1>
-<p>Variation should come primarily from decals instead of geometry.</p>
-<p>Examples:</p>
-<p>Cracks</p>
-<p>Leaks</p>
-<p>Dirt</p>
-<p>Graffiti</p>
-<p>Water Damage</p>
-<p>Bullet Holes</p>
-<p>Broken Plaster</p>
-<p>Rust</p>
-<p>Paint Peeling</p>
-<p>Decals dramatically increase visual variety while keeping geometry lightweight.</p>
-<hr />
-<h1 id="smart-decal-placement">Smart Decal Placement</h1>
-<p>Phoenix Builder can suggest decal locations.</p>
-<p>Examples:</p>
-<p>Leaks appear below roofs.</p>
-<p>Dirt appears near ground level.</p>
-<p>Rust appears beneath metal.</p>
-<p>Moss grows in humid areas.</p>
-<p>The user remains in complete control.</p>
-<hr />
-<h1 id="material-families">Material Families</h1>
-<p>Instead of assigning individual materials, users select Material Families.</p>
-<p>Example</p>
-<p>Victorian Brick</p>
-<p>contains</p>
-<p>Several Bricks</p>
-<p>Several Mortars</p>
-<p>Paint Variants</p>
-<p>Age Variants</p>
-<p>Weather Variants</p>
-<p>This allows large buildings to remain visually consistent.</p>
-<hr />
-<h1 id="style-families">Style Families</h1>
-<p>Style Families combine:</p>
-<p>Surface Recipes</p>
-<p>Trim Templates</p>
-<p>Decal Libraries</p>
-<p>Color Palettes</p>
-<p>Material Families</p>
-<p>Window Styles</p>
-<p>Door Styles</p>
-<p>Roof Profiles</p>
-<p>Changing style should require one click.</p>
-<hr />
-<h1 id="texture-optimization">Texture Optimization</h1>
-<p>Phoenix Builder always prefers efficient rendering.</p>
-<p>Possible implementations include:</p>
-<p>Trim Sheets</p>
-<p>Texture Atlases</p>
-<p>Tileable PBRs</p>
-<p>Shared Materials</p>
-<p>Texture Arrays</p>
-<p>Virtual Textures</p>
-<p>Sprite Atlases</p>
-<p>The implementation depends on the Export Profile.</p>
-<p>Users should not need to understand the underlying optimization.</p>
-<hr />
-<h1 id="mobile-optimization">Mobile Optimization</h1>
-<p>SpriteKit and mobile exports prioritize:</p>
-<p>Small texture memory</p>
-<p>Few draw calls</p>
-<p>Shared atlases</p>
-<p>Minimal overdraw</p>
-<p>Layer reuse</p>
-<p>Decals over geometry</p>
-<p>These optimizations happen automatically.</p>
-<hr />
-<h1 id="spritekit-rendering">SpriteKit Rendering</h1>
-<p>For SpriteKit exports, Surface Recipes become layered sprites.</p>
-<p>Typical output:</p>
-<p>Roof</p>
-<p>Upper Walls</p>
-<p>Interior Walls</p>
-<p>Floors</p>
-<p>Props</p>
-<p>Shadow Layer</p>
-<p>Collision Layer</p>
-<p>Interaction Layer</p>
-<p>The same building can later be exported as full 3D geometry.</p>
-<hr />
-<h1 id="future-rendering">Future Rendering</h1>
-<p>Future versions may support:</p>
-<p>Virtual Materials</p>
-<p>Nanite-friendly meshes</p>
-<p>Runtime weather</p>
-<p>Runtime aging</p>
-<p>Seasonal variations</p>
-<p>Snow accumulation</p>
-<p>Wet surfaces</p>
-<p>All without changing Building DNA.</p>
-<hr />
-<h1 id="architectural-independence">Architectural Independence</h1>
-<p>Perhaps the most important principle:</p>
-<p>Buildings describe architecture.</p>
-<p>Surfaces describe appearance.</p>
-<p>Neither should depend on the other.</p>
-<hr />
-<h1 id="guiding-principle">Guiding Principle</h1>
-<p>A user should never think:</p>
-<p>"I need a different mesh."</p>
-<p>Instead they should think:</p>
-<p>"I need a different architectural surface."</p>
-<p>Phoenix Builder decides the most efficient implementation.</p>
-<hr />
-<p>End of File</p>
+<h1 id="architectural-decision-records-adrs">Architectural Decision Records (ADRs)</h1>
+<p>All major architectural decisions for the Phoenix Ecosystem are documented here as <strong>Architectural Decision Records (ADRs)</strong>. This ensures that the reasoning behind design choices is captured, remaining accessible to future developers and AI assistants.</p>
+<h2 id="adr-template">ADR Template</h2>
+<p>Every ADR should be formatted using the following structure:</p>
+<div class="highlight"><pre><span></span><code><span class="gh"># ADR-[Number]: [Title]</span>
+
+<span class="k">*</span><span class="w"> </span><span class="gs">**Status**</span>: [Draft | Proposed | Accepted | Rejected | Superseded]
+<span class="k">*</span><span class="w"> </span><span class="gs">**Date**</span>: YYYY-MM-DD
+<span class="k">*</span><span class="w"> </span><span class="gs">**Authors**</span>: [Name]
+<span class="k">*</span><span class="w"> </span><span class="gs">**Decisions Superseded**</span>: [ADR-XXX (if applicable)]
+
+<span class="gu">## Context &amp; Problem Statement</span>
+Provide a clear description of the problem, background context, and the choices we need to make.
+
+<span class="gu">## Considered Options</span>
+List all potential approaches or alternatives considered.
+<span class="k">*</span><span class="w"> </span><span class="gs">**Option 1**</span>: Pros &amp; Cons
+<span class="k">*</span><span class="w"> </span><span class="gs">**Option 2**</span>: Pros &amp; Cons
+
+<span class="gu">## Decision Outcome</span>
+State the chosen option and explain the rationale for the choice.
+
+<span class="gu">## Consequences</span>
+Describe the impact of this decision (e.g., changes to file formats, new dependencies, complexity trade-offs).
+</code></pre></div>
+<h2 id="adr-index">ADR Index</h2>
+<table>
+<thead>
+<tr>
+<th>ADR ID</th>
+<th>Title</th>
+<th>Status</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="001_PhoenixAssetSpecification/">ADR-001</a></td>
+<td>File Format Schema for .pbp and .pba</td>
+<td>Proposed</td>
+<td>2026-08-07</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1671,10 +1424,10 @@ Status: Draft</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.action.edit", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

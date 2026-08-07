@@ -1,0 +1,146 @@
+Project identity:
+
+
+```text
+🔥 Phoenix Forge
+"Create"
+
+The artist's workshop.
+
+• Blender add-on
+• Create intelligent assets
+• Define metadata
+• Create sockets
+• Create variants
+• Create procedural primitives
+• Export PBS assets
+
+            │
+            ▼
+
+🏛️ Phoenix Builder
+"Assemble"
+
+The architect's workspace.
+
+• Assemble buildings
+• Construction Grammar
+• Building DNA
+• Surface DNA
+• Templates
+• Rule-based procedural generation
+• Material Vault
+• Export Profiles
+
+            │
+            ▼
+
+🎮 Phoenix Engine
+"Bring to Life"
+
+The runtime.
+
+• Simulation
+• Rendering
+• ECS
+• Save System
+• AI
+• Physics
+• Audio
+• Gameplay
+```
+
+Each tool has **one clear responsibility**:
+
+* **Forge** creates *assets*.
+* **Builder** creates *architecture*.
+* **Engine** creates *experiences*.
+
+None of them overlaps. None tries to replace the others.
+
+---
+
+## Ecosystem official name
+
+Rather than treating them as three unrelated projects, they should be presented as:
+
+# The Phoenix Ecosystem
+
+```text
+                 THE PHOENIX ECOSYSTEM
+
+        🔥 Phoenix Forge
+        Intelligent Asset Authoring
+                 │
+                 ▼
+        🏛️ Phoenix Builder
+      Procedural Architectural Assembly
+                 │
+                 ▼
+         🎮 Phoenix Engine
+         Runtime & Simulation
+```
+
+This also leaves room for future tools without breaking the naming convention.
+
+For example:
+
+* 🧪 **Phoenix Lab** → experimental features and procedural generators.
+* 📦 **Phoenix Vault** → online repository for Building Kits, Material Vaults, Templates and community assets.
+* 🌍 **Phoenix World** → future district/city/world editor.
+* 📖 **Phoenix Atlas** → documentation, examples and learning hub.
+
+Whether those ever exist or not, the ecosystem already feels scalable.
+
+---
+
+## Something I'd like to make an official architectural principle
+
+I'd even add this to the Design Bible later as a formal decision:
+
+> **Every Phoenix application should have a single, clearly defined responsibility.**
+
+| Application         | Responsibility            | Does NOT do                 |
+| ------------------- | ------------------------- | --------------------------- |
+| 🔥 Phoenix Forge    | Create intelligent assets | Build complete architecture |
+| 🏛️ Phoenix Builder | Assemble architecture     | Model arbitrary geometry    |
+| 🎮 Phoenix Engine   | Simulate and render games | Author assets               |
+
+That single principle will help prevent feature creep across all three projects.
+
+---
+
+
+We're designing a **complete open-source game creation pipeline** centered on deterministic workflows instead of opaque automation.
+
+```text
+Artist
+   │
+   ▼
+🔥 Phoenix Forge
+(Create intelligent assets)
+
+   │
+   ▼
+🏛️ Phoenix Builder
+(Create architecture)
+
+   │
+   ▼
+🎮 Phoenix Engine
+(Create gameplay)
+
+   │
+   ▼
+📱 iPhone
+💻 macOS
+🖥️ Windows
+🐧 Linux
+🌐 Web (future)
+```
+
+That vision feels much bigger than where we started, but it's still remarkably coherent because every tool has a well-defined role.
+
+From now on I'll treat this naming and architecture as part of the project's foundation. 
+As we continue working on both **Phoenix Builder** and **Phoenix Engine**, 
+I'll keep this ecosystem consistent, preserve the separation of responsibilities, and ensure future Design Bible chapters and engine architecture follow this structure.

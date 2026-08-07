@@ -101,13 +101,14 @@ nav:
       - 15 Roadmap: design-bible/15_Roadmap.md
       - 16 Decision Log: design-bible/16_DecisionLog.md
 
-  - Phoenix SDK:
-      - SDK Overview: sdk/00_PhoenixSDKOverview.md
+  - Phoenix Architectural Language (PAL):
+      - PAL Overview: sdk/00_PhoenixSDKOverview.md
 
   - Specifications:
       - Specifications Index: specifications/README.md
       - PHX-SPEC-001 (Primitives): specifications/pbp_format.md
       - PHX-SPEC-002 (Building Assets): specifications/pba_format.md
+      - PHX-SPEC-003 (PAL Ontology): specifications/pal_ontology.md
 
   - Phoenix Forge:
       - Overview: forge/README.md
@@ -126,6 +127,7 @@ nav:
       - ADR-001 (Asset Philosophy): adr/001_PhoenixAssetPhilosophy.md
       - ADR-002 (Parametric Primitives): adr/002_ParametricPrimitiveArchitecture.md
       - ADR-003 (Building Assets): adr/003_BuildingAssetArchitecture.md
+      - ADR-004 (PAL Ontology): adr/004_PhoenixArchitecturalLanguage.md
 
 extra:
 

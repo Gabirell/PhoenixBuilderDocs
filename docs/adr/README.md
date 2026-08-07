@@ -36,4 +36,5 @@ Describe the impact of this decision (e.g., changes to file formats, new depende
 | [ADR-001](001_PhoenixAssetPhilosophy.md) | Phoenix Asset Philosophy (Primitive vs. Building Asset) | Proposed | 2026-08-07 |
 | [ADR-002](002_ParametricPrimitiveArchitecture.md) | Parametric Primitive Architecture (.pbp) | Proposed | 2026-08-07 |
 | [ADR-003](003_BuildingAssetArchitecture.md) | Building Asset Architecture (.pba) | Proposed | 2026-08-07 |
+| [ADR-004](004_PhoenixArchitecturalLanguage.md) | Phoenix Architectural Language (PAL) Ontology | Proposed | 2026-08-07 |
 

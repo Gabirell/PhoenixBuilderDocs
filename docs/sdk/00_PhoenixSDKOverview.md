@@ -1,8 +1,8 @@
-# Phoenix SDK Overview
+# Phoenix Architectural Language (PAL) Overview
 
-The **Phoenix SDK** is the shared core of the entire Phoenix Ecosystem. It represents the shared interface, contracts, data schemas, and mathematical specifications that ensure compatibility between the creation, assembly, and execution stages of game development.
+The **Phoenix Architectural Language (PAL)** is the shared core of the entire Phoenix Ecosystem. It represents the shared semantic ontology, specifications, and data contracts that ensure compatibility between the creation (Forge), assembly (Builder), and execution (Engine) stages of game development.
 
-Instead of treating applications as silos, the Phoenix Ecosystem positions all tools (Forge, Builder, Engine) as co-equal implementors of the Phoenix SDK.
+Instead of treating applications as isolated tools, the Phoenix Ecosystem positions all tools as co-equal implementors of PAL.
 
 ```
                  PHOENIX ECOSYSTEM
@@ -15,9 +15,10 @@ Instead of treating applications as silos, the Phoenix Ecosystem positions all t
         │                │                │
         └────────────────┼────────────────┘
                          │
-                    Phoenix SDK
+         Phoenix Architectural Language (PAL)
                          │
              Shared Specifications & Data
+             - Core Ontology (Wall, Door, Cornice...)
              - File Formats (.pba, .pbp)
              - Sockets & Snapping Grammar
              - Surface Recipes & Style DNA
@@ -25,23 +26,24 @@ Instead of treating applications as silos, the Phoenix Ecosystem positions all t
 
 ---
 
-## Shared Specifications
+## Active Specifications
 
 * **[PHX-SPEC-001 (Primitives)](../specifications/pbp_format.md)**: Specifications for parametric, mathematical components.
 * **[PHX-SPEC-002 (Building Assets)](../specifications/pba_format.md)**: Specifications for artist-authored models combined with JSON metadata.
+* **[PHX-SPEC-003 (PAL Ontology)](../specifications/pal_ontology.md)**: The core dictionary of semantic architectural classes.
 
 ---
 
-## Core Pillars of the SDK
+## Core Pillars of PAL
 
-### 1. File Formats (.pbp and .pba)
+### 1. Semantic Ontology (Classes & Relationships)
+Establishes first-class elements (e.g. Wall, Window, Cornice) with defined snapping connectors and hosts. This allows the editor to reason about architecture instead of raw polygon files.
+
+### 2. File Formats (.pbp and .pba)
 Enforces a clean separation between pure parametric metadata (`.pbp`) and detailed artist-authored geometry packaged with socket connectors (`.pba`).
 
-### 2. Sockets & Construction Grammar
-Defines how primitives and building assets interact. This schema governs how elements connect, align, and validate their bounds relative to surrounding architectural blocks.
+### 3. Sockets & Construction Grammar
+Defines how elements connect, align, and validate their boundaries. Sockets enforce structural sanity (e.g. windows must snap onto walls or roof planes).
 
-### 3. Surface System
-Decouples visual properties (textures, materials, shaders) from geometry. The SDK defines **Surface Recipes** and **Style Families** that allow instant variations without modifying structural geometry.
-
-### 4. Deterministic DNA
-Ensures that all procedural algorithms remain entirely seed-based and non-destructive. The identical source file must result in the exact same rendered geometry and configuration in both the editor (Builder) and the game client (Engine).
+### 4. Surface System & Style Families
+Decouples visual properties (materials, textures) from geometry. Defines **Surface Recipes** and **Style Families** that allow complete visual transformations (e.g., Cottage to Gothic) without modifying structural layouts.

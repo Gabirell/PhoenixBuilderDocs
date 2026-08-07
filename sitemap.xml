@@ -13,7 +13,19 @@
          <lastmod>2026-08-07</lastmod>
     </url>
     <url>
-         <loc>https://gabirell.github.io/PhoenixBuilderDocs/adr/001_PhoenixAssetSpecification/</loc>
+         <loc>https://gabirell.github.io/PhoenixBuilderDocs/adr/001_PhoenixAssetPhilosophy/</loc>
+         <lastmod>2026-08-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gabirell.github.io/PhoenixBuilderDocs/adr/002_ParametricPrimitiveArchitecture/</loc>
+         <lastmod>2026-08-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gabirell.github.io/PhoenixBuilderDocs/adr/003_BuildingAssetArchitecture/</loc>
+         <lastmod>2026-08-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gabirell.github.io/PhoenixBuilderDocs/builder/</loc>
          <lastmod>2026-08-07</lastmod>
     </url>
     <url>
@@ -86,6 +98,34 @@
     </url>
     <url>
          <loc>https://gabirell.github.io/PhoenixBuilderDocs/design-bible/PhoenixManifesto/</loc>
+         <lastmod>2026-08-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gabirell.github.io/PhoenixBuilderDocs/engine/</loc>
+         <lastmod>2026-08-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gabirell.github.io/PhoenixBuilderDocs/forge/</loc>
+         <lastmod>2026-08-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gabirell.github.io/PhoenixBuilderDocs/sdk/00_PhoenixSDKOverview/</loc>
+         <lastmod>2026-08-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gabirell.github.io/PhoenixBuilderDocs/specifications/</loc>
+         <lastmod>2026-08-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gabirell.github.io/PhoenixBuilderDocs/specifications/pba_format/</loc>
+         <lastmod>2026-08-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gabirell.github.io/PhoenixBuilderDocs/specifications/pbp_format/</loc>
+         <lastmod>2026-08-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gabirell.github.io/PhoenixBuilderDocs/tutorials/</loc>
          <lastmod>2026-08-07</lastmod>
     </url>
 </urlset>

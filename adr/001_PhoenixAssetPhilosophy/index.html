@@ -12,13 +12,13 @@
         <meta name="author" content="Gabriel Netto">
       
       
-        <link rel="canonical" href="https://gabirell.github.io/PhoenixBuilderDocs/design-bible/02_Philosophy/">
+        <link rel="canonical" href="https://gabirell.github.io/PhoenixBuilderDocs/adr/001_PhoenixAssetPhilosophy/">
       
       
-        <link rel="prev" href="../01_Vision/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../03_UserExperience/">
+        <link rel="next" href="../002_ParametricPrimitiveArchitecture/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>02 Philosophy - Phoenix Builder Documentation</title>
+        <title>ADR-001 (Asset Philosophy) - Phoenix Builder Documentation</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#phoenix-builder-design-bible" class="md-skip">
+        <a href="#adr-001-phoenix-asset-philosophy-primitive-vs-building-asset" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              02 Philosophy
+              ADR-001 (Asset Philosophy)
             
           </span>
         </div>
@@ -248,13 +248,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../PhoenixManifesto/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../design-bible/PhoenixManifesto/" class="md-tabs__link">
           
   
   
@@ -404,11 +402,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../adr/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -497,10 +497,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -544,22 +542,21 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -577,7 +574,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -595,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PhoenixManifesto/" class="md-nav__link">
+      <a href="../../design-bible/PhoenixManifesto/" class="md-nav__link">
         
   
   
@@ -623,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00_Index/" class="md-nav__link">
+      <a href="../../design-bible/00_Index/" class="md-nav__link">
         
   
   
@@ -651,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_Vision/" class="md-nav__link">
+      <a href="../../design-bible/01_Vision/" class="md-nav__link">
         
   
   
@@ -676,37 +673,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    02 Philosophy
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../design-bible/02_Philosophy/" class="md-nav__link">
         
   
   
@@ -722,37 +692,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#02_philosophymd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        02_Philosophy.md
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -765,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_UserExperience/" class="md-nav__link">
+      <a href="../../design-bible/03_UserExperience/" class="md-nav__link">
         
   
   
@@ -793,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04_Interface/" class="md-nav__link">
+      <a href="../../design-bible/04_Interface/" class="md-nav__link">
         
   
   
@@ -821,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_BuildingWorkflow/" class="md-nav__link">
+      <a href="../../design-bible/05_BuildingWorkflow/" class="md-nav__link">
         
   
   
@@ -849,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06_ArchitecturalSurfaceSystem/" class="md-nav__link">
+      <a href="../../design-bible/06_ArchitecturalSurfaceSystem/" class="md-nav__link">
         
   
   
@@ -877,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07_ConstructionGrammar/" class="md-nav__link">
+      <a href="../../design-bible/07_ConstructionGrammar/" class="md-nav__link">
         
   
   
@@ -905,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08_AssemblyEngine/" class="md-nav__link">
+      <a href="../../design-bible/08_AssemblyEngine/" class="md-nav__link">
         
   
   
@@ -933,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_AssetEcosystem/" class="md-nav__link">
+      <a href="../../design-bible/09_AssetEcosystem/" class="md-nav__link">
         
   
   
@@ -961,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10_BuildingDNA/" class="md-nav__link">
+      <a href="../../design-bible/10_BuildingDNA/" class="md-nav__link">
         
   
   
@@ -989,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../11_ProceduralArchitecture/" class="md-nav__link">
+      <a href="../../design-bible/11_ProceduralArchitecture/" class="md-nav__link">
         
   
   
@@ -1017,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../12_RenderingAndViewport/" class="md-nav__link">
+      <a href="../../design-bible/12_RenderingAndViewport/" class="md-nav__link">
         
   
   
@@ -1045,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../13_ExportProfiles/" class="md-nav__link">
+      <a href="../../design-bible/13_ExportProfiles/" class="md-nav__link">
         
   
   
@@ -1073,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../14_PhoenixIntegration/" class="md-nav__link">
+      <a href="../../design-bible/14_PhoenixIntegration/" class="md-nav__link">
         
   
   
@@ -1101,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../15_Roadmap/" class="md-nav__link">
+      <a href="../../design-bible/15_Roadmap/" class="md-nav__link">
         
   
   
@@ -1129,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../16_DecisionLog/" class="md-nav__link">
+      <a href="../../design-bible/16_DecisionLog/" class="md-nav__link">
         
   
   
@@ -1674,6 +1613,8 @@
       
   
   
+    
+  
   
   
     
@@ -1693,22 +1634,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../adr/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1726,13 +1668,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1749,10 +1691,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../adr/001_PhoenixAssetPhilosophy/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-001 (Asset Philosophy)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1768,6 +1737,109 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context-problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context &amp; Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considered-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Considered Options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Considered Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-monolithic-procedural-generation-pure-grammarcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1: Monolithic Procedural Generation (Pure Grammar/Code)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-pure-prefab-kitbashing-static-meshes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2: Pure Prefab Kitbashing (Static Meshes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-3-bipartite-asset-system-parametric-primitives-artist-authored-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 3: Bipartite Asset System (Parametric Primitives + Artist-Authored Assets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision Outcome
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consequences
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1780,7 +1852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../adr/002_ParametricPrimitiveArchitecture/" class="md-nav__link">
+      <a href="../002_ParametricPrimitiveArchitecture/" class="md-nav__link">
         
   
   
@@ -1808,7 +1880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../adr/003_BuildingAssetArchitecture/" class="md-nav__link">
+      <a href="../003_BuildingAssetArchitecture/" class="md-nav__link">
         
   
   
@@ -1863,10 +1935,82 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#02_philosophymd" class="md-nav__link">
+  <a href="#context-problem-statement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        02_Philosophy.md
+        Context &amp; Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considered-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Considered Options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Considered Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-monolithic-procedural-generation-pure-grammarcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1: Monolithic Procedural Generation (Pure Grammar/Code)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-pure-prefab-kitbashing-static-meshes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2: Pure Prefab Kitbashing (Static Meshes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-3-bipartite-asset-system-parametric-primitives-artist-authored-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 3: Bipartite Asset System (Parametric Primitives + Artist-Authored Assets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision Outcome
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consequences
       
     </span>
   </a>
@@ -1890,7 +2034,7 @@
 
 
   
-    <a href="https://github.com/Gabirell/PhoenixBuilderDocs/edit/master/docs/design-bible/02_Philosophy.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Gabirell/PhoenixBuilderDocs/edit/master/docs/adr/001_PhoenixAssetPhilosophy.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1898,63 +2042,56 @@
   
 
 
-<h1 id="phoenix-builder-design-bible">Phoenix Builder Design Bible</h1>
-<h2 id="02_philosophymd">02_Philosophy.md</h2>
-<p>Version: 1.0.0
-Status: Draft</p>
-<h1 id="philosophy">Philosophy</h1>
-<p>Phoenix Builder is a procedural architectural assembler built upon intelligent assets.</p>
-<p>Its purpose is not to create geometry.</p>
-<p>Its purpose is to assemble architecture.</p>
-<h2 id="core-beliefs">Core Beliefs</h2>
-<h3 id="architecture-first">Architecture First</h3>
-<p>Users think about buildings, not polygons.</p>
-<h3 id="progressive-complexity">Progressive Complexity</h3>
-<p>Phoenix Builder grows with the user.</p>
-<p>Level 1: Builder
-- Assemble buildings quickly.</p>
-<p>Level 2: Variant Editor
-- Customize architectural recipes.
-- No mesh editing.</p>
-<p>Level 3: Specialist Workflow
-- Blender + Phoenix SDK.
-- Unlimited artistic freedom.</p>
-<h2 id="non-destructive-design">Non-Destructive Design</h2>
-<p>Every operation must remain editable.</p>
-<p>Nothing should permanently destroy information.</p>
-<h2 id="deterministic-generation">Deterministic Generation</h2>
-<p>Every generated building is reproducible from:</p>
+<h1 id="adr-001-phoenix-asset-philosophy-primitive-vs-building-asset">ADR-001: Phoenix Asset Philosophy (Primitive vs. Building Asset)</h1>
 <ul>
-<li>Building Kit</li>
-<li>Rules</li>
-<li>Parameters</li>
-<li>Seed</li>
+<li><strong>Status</strong>: Proposed</li>
+<li><strong>Date</strong>: 2026-08-07</li>
+<li><strong>Authors</strong>: Antigravity &amp; Gabriel Netto</li>
+<li><strong>Decisions Superseded</strong>: None</li>
 </ul>
-<h2 id="separation-of-responsibilities">Separation of Responsibilities</h2>
-<p>Blender creates geometry.</p>
-<p>Phoenix Builder creates architecture.</p>
-<p>Game engines execute the result.</p>
-<h2 id="intelligent-assets">Intelligent Assets</h2>
-<p>Every asset carries semantic meaning.</p>
-<p>A wall knows it is a wall.</p>
-<p>A roof knows it is a roof.</p>
-<p>A door knows how it connects.</p>
-<h2 id="construction-grammar">Construction Grammar</h2>
-<p>Architecture is assembled through meaning rather than raw meshes.</p>
-<p>The same construction grammar applies whether an asset comes from:
-- Phoenix Builder
-- Variant Editor
-- Blender + Phoenix SDK</p>
-<h2 id="simplicity">Simplicity</h2>
-<p>The most common workflow should require the fewest clicks.</p>
-<p>Power should emerge through intelligent defaults rather than complex interfaces.</p>
-<h2 id="guiding-question">Guiding Question</h2>
-<p>Whenever a feature is proposed ask:</p>
-<p>"Does this help users design architecture instead of managing geometry?"</p>
-<p>If yes, it belongs in Phoenix Builder.</p>
-<p>If not, it probably belongs somewhere else.</p>
 <hr />
-<p>End of File</p>
+<h2 id="context-problem-statement">Context &amp; Problem Statement</h2>
+<p>In the Phoenix Ecosystem, we must define how architectural structures are constructed and represented. In general game development:
+* Levels are typically built of monolithic meshes or static prefabs.
+* Mesh modification requires modeling tools.
+* Procedural systems are often black boxes, making manual adjustments or variant swaps difficult.</p>
+<p>To build an easy-to-use, non-destructive architectural editor (Phoenix Builder) that solo developers and indie studios can maintain, we need to decide on the core classification of our assets.</p>
+<hr />
+<h2 id="considered-options">Considered Options</h2>
+<h3 id="option-1-monolithic-procedural-generation-pure-grammarcode">Option 1: Monolithic Procedural Generation (Pure Grammar/Code)</h3>
+<ul>
+<li>All walls, windows, doors, and roofs are generated on the fly through code.</li>
+<li><strong>Pros</strong>: Infinitely flexible, tiny disk footprint.</li>
+<li><strong>Cons</strong>: Extremely hard for artists to author custom stylized details (like ornate Gothic windows or complex gargoyles). Everything must be parameterized mathematically.</li>
+</ul>
+<h3 id="option-2-pure-prefab-kitbashing-static-meshes">Option 2: Pure Prefab Kitbashing (Static Meshes)</h3>
+<ul>
+<li>All buildings are assembled by placing pre-made modular meshes (e.g. wall tiles, door tiles).</li>
+<li><strong>Pros</strong>: Simple asset authoring in Blender/Maya.</li>
+<li><strong>Cons</strong>: No procedural flexibility. Changing a wall length or height requires stretching the mesh (which stretches textures) or creating new unique models, breaking the "architecture, not geometry" rule.</li>
+</ul>
+<h3 id="option-3-bipartite-asset-system-parametric-primitives-artist-authored-assets">Option 3: Bipartite Asset System (Parametric Primitives + Artist-Authored Assets)</h3>
+<ul>
+<li>Split the ecosystem into two categories:</li>
+<li><strong>Phoenix Primitives (<code>.pbp</code>)</strong>: Mathematical, parametric skeletons (walls, floors, roofs) whose geometry is generated procedurally by the engine/editor.</li>
+<li><strong>Phoenix Building Assets (<code>.pba</code>)</strong>: Static 3D meshes (doors, windows, furniture, trims) authored in Blender, decorated with metadata, that socket into the primitives.</li>
+<li><strong>Pros</strong>: Combines procedural flexibility for skeletons (walls can grow, shrink, and join dynamically without texture stretching) with infinite artistic expression for detailed fixtures.</li>
+<li><strong>Cons</strong>: Requires managing two distinct formats and building a layout/snapping engine (sockets) to merge them.</li>
+</ul>
+<hr />
+<h2 id="decision-outcome">Decision Outcome</h2>
+<p>We chose <strong>Option 3: Bipartite Asset System</strong>. </p>
+<p>By dividing the world into <strong>Parametric Primitives (<code>.pbp</code>)</strong> and <strong>Building Assets (<code>.pba</code>)</strong>, we establish the core foundation for our <strong>Three Levels of Editability</strong>:
+* <strong>Level 1 (Assembler)</strong>: Instantiates primitives and snaps assets to sockets.
+* <strong>Level 2 (Variant Creator)</strong>: Swaps surface recipes on primitives or mesh variations on building assets.
+* <strong>Level 3 (Specialist)</strong>: Authors custom <code>.pba</code> files in Blender via Phoenix Forge.</p>
+<hr />
+<h2 id="consequences">Consequences</h2>
+<ul>
+<li><strong>Clear Separation of Concerns</strong>: Primitives manage layout, boundaries, and construction grammar. Building Assets handle decorative details and architectural articulation.</li>
+<li><strong>Stable Contracts</strong>: The interfaces (sockets, attachment rules) between <code>.pbp</code> and <code>.pba</code> are defined at the SDK level, allowing tools to evolve independently.</li>
+<li><strong>Texture Integrity</strong>: Primitives can use seamless tiled materials based on surface recipes, while building assets use custom UV sets or trims, avoiding texture stretching.</li>
+</ul>
 
 
 

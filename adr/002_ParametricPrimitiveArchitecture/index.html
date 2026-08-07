@@ -12,9 +12,13 @@
         <meta name="author" content="Gabriel Netto">
       
       
-        <link rel="canonical" href="https://gabirell.github.io/PhoenixBuilderDocs/adr/001_PhoenixAssetSpecification/">
+        <link rel="canonical" href="https://gabirell.github.io/PhoenixBuilderDocs/adr/002_ParametricPrimitiveArchitecture/">
       
       
+        <link rel="prev" href="../001_PhoenixAssetPhilosophy/">
+      
+      
+        <link rel="next" href="../003_BuildingAssetArchitecture/">
       
       
         
@@ -25,7 +29,7 @@
     
     
       
-        <title>ADR-001: File Format Schema for .pbp and .pba - Phoenix Builder Documentation</title>
+        <title>ADR-002 (Parametric Primitives) - Phoenix Builder Documentation</title>
       
     
     
@@ -76,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adr-001-file-format-schema-for-pbp-and-pba" class="md-skip">
+        <a href="#adr-002-parametric-primitive-architecture-pbp" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ADR-001: File Format Schema for .pbp and .pba
+              ADR-002 (Parametric Primitives)
             
           </span>
         </div>
@@ -254,7 +258,7 @@
   
     
   
-  Manifesto
+  Ecosystem Philosophy
 
         </a>
       </li>
@@ -270,13 +274,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../design-bible/00_Index/" class="md-tabs__link">
+        <a href="../../sdk/00_PhoenixSDKOverview/" class="md-tabs__link">
           
   
   
     
   
-  Phoenix Builder Design Bible
+  Phoenix SDK
 
         </a>
       </li>
@@ -292,13 +296,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../sdk/00_PhoenixSDKOverview.md" class="md-tabs__link">
+        <a href="../../specifications/" class="md-tabs__link">
           
   
   
     
   
-  SDK
+  Specifications
 
         </a>
       </li>
@@ -314,6 +318,96 @@
     
     
       <li class="md-tabs__item">
+        <a href="../../forge/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Phoenix Forge
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../builder/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Phoenix Builder
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../engine/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Phoenix Engine
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorials/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
   
@@ -410,6 +504,40 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -435,7 +563,7 @@
   <span class="md-ellipsis">
     
   
-    Manifesto
+    Ecosystem Philosophy
   
 
     
@@ -451,7 +579,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Manifesto
+    Ecosystem Philosophy
   
 
           </label>
@@ -484,103 +612,6 @@
   
 
               
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Phoenix Builder Design Bible
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Phoenix Builder Design Bible
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -1091,17 +1122,17 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    SDK
+    Phoenix SDK
   
 
     
@@ -1112,12 +1143,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    SDK
+    Phoenix SDK
   
 
           </label>
@@ -1130,14 +1161,150 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sdk/00_PhoenixSDKOverview.md" class="md-nav__link">
+      <a href="../../sdk/00_PhoenixSDKOverview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    None
+    SDK Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../specifications/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Specifications
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Specifications
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specifications/pbp_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PHX-SPEC-001 (Primitives)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specifications/pba_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PHX-SPEC-002 (Building Assets)
   
 
     
@@ -1190,6 +1357,299 @@
         
           
           <div class="md-nav__link md-nav__container">
+            <a href="../../forge/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phoenix Forge
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phoenix Forge
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../builder/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phoenix Builder
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phoenix Builder
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../engine/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phoenix Engine
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phoenix Engine
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tutorials/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
             <a href="../" class="md-nav__link ">
               
   
@@ -1207,10 +1667,15 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1220,6 +1685,209 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../001_PhoenixAssetPhilosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-001 (Asset Philosophy)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-002 (Parametric Primitives)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-002 (Parametric Primitives)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context-problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context &amp; Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considered-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Considered Options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Considered Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-baked-geometry-vertexpolygon-data-inside-the-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1: Baked Geometry (Vertex/Polygon data inside the file)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-parameterized-definition-pure-jsonyaml-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2: Parameterized Definition (Pure JSON/YAML metadata)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision Outcome
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consequences
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../003_BuildingAssetArchitecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR-003 (Building Assets)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -1279,10 +1947,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#option-1-binary-formats-eg-protocol-buffers-flatbuffers-or-custom-binary" class="md-nav__link">
+  <a href="#option-1-baked-geometry-vertexpolygon-data-inside-the-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 1: Binary Formats (e.g., Protocol Buffers, FlatBuffers, or custom binary)
+        Option 1: Baked Geometry (Vertex/Polygon data inside the file)
       
     </span>
   </a>
@@ -1290,21 +1958,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-2-pure-text-json-yaml" class="md-nav__link">
+  <a href="#option-2-parameterized-definition-pure-jsonyaml-metadata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Option 2: Pure Text JSON / YAML
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-3-hybrid-package-recommended" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 3: Hybrid Package (Recommended)
+        Option 2: Parameterized Definition (Pure JSON/YAML metadata)
       
     </span>
   </a>
@@ -1324,45 +1981,6 @@
       
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#proposed-schema-specifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Proposed Schema Specifications
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Proposed Schema Specifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-pbp-phoenix-primitive-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. .pbp (Phoenix Primitive) Schema
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-pba-phoenix-building-asset-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. .pba (Phoenix Building Asset) Schema
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1394,7 +2012,7 @@
 
 
   
-    <a href="https://github.com/Gabirell/PhoenixBuilderDocs/edit/master/docs/adr/001_PhoenixAssetSpecification.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Gabirell/PhoenixBuilderDocs/edit/master/docs/adr/002_ParametricPrimitiveArchitecture.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1402,156 +2020,47 @@
   
 
 
-<h1 id="adr-001-file-format-schema-for-pbp-and-pba">ADR-001: File Format Schema for .pbp and .pba</h1>
+<h1 id="adr-002-parametric-primitive-architecture-pbp">ADR-002: Parametric Primitive Architecture (.pbp)</h1>
 <ul>
 <li><strong>Status</strong>: Proposed</li>
 <li><strong>Date</strong>: 2026-08-07</li>
-<li><strong>Authors</strong>: Antigravity (AI Architect) &amp; Gabriel Netto</li>
+<li><strong>Authors</strong>: Antigravity &amp; Gabriel Netto</li>
 <li><strong>Decisions Superseded</strong>: None</li>
 </ul>
 <hr />
 <h2 id="context-problem-statement">Context &amp; Problem Statement</h2>
-<p>The Phoenix Ecosystem requires a standard, robust, and platform-agnostic file format specification for architectural assets. These formats must bridge three distinct tools:
-1. <strong>🔥 Phoenix Forge</strong> (Blender Add-on): Generates and exports the files.
-2. <strong>🏛 Phoenix Builder</strong> (macOS App): Reads, instantiates, and procedurally modifies/assembles them.
-3. <strong>🎮 Phoenix Engine</strong> (Swift Game Engine): Consumes the finalized, exported assets for real-time runtime rendering.</p>
-<p>We need to specify two distinct formats:
-- <strong><code>.pbp</code> (Phoenix Primitive)</strong>: For parametric, procedurally generated components (walls, roofs, foundations, etc.).
-- <strong><code>.pba</code> (Phoenix Building Asset)</strong>: For static, artist-authored components (doors, windows, columns, trims) which attach to primitives.</p>
-<p>The file schemas must support the <strong>Three Levels of Editability</strong> (Assembler, Variant Creator, Specialist) and enforce the <strong>Surface System</strong> (separating appearance/material from geometry).</p>
+<p>Phoenix Primitives (<code>.pbp</code>) represent walls, floors, roofs, columns, and foundations. We must decide how to store and manage their geometry and structural information. </p>
+<p>Should a primitive contain compiled vertex/index arrays representing the 3D mesh, or should it store purely mathematical and structural parameters that are evaluated at runtime?</p>
 <hr />
 <h2 id="considered-options">Considered Options</h2>
-<h3 id="option-1-binary-formats-eg-protocol-buffers-flatbuffers-or-custom-binary">Option 1: Binary Formats (e.g., Protocol Buffers, FlatBuffers, or custom binary)</h3>
+<h3 id="option-1-baked-geometry-vertexpolygon-data-inside-the-file">Option 1: Baked Geometry (Vertex/Polygon data inside the file)</h3>
 <ul>
-<li><strong>Pros</strong>: Extremely fast parsing, small file size on disk, easy integration in Swift/C++.</li>
-<li><strong>Cons</strong>: Hard to inspect manually (requires tools to read), difficult for a developer to edit with a simple text editor, harder to manage version diffs in Git.</li>
+<li>The file contains the actual 3D mesh vertices, normals, and UVs generated at the time of creation.</li>
+<li><strong>Pros</strong>: Rapid loading in the viewport since no procedural generation is needed on load.</li>
+<li><strong>Cons</strong>: Destructive. If the user changes a wall length or height, we must recalculate, modify, and re-serialize the raw mesh. Version diffs in Git will show huge binary/numeric changes. It violates the core rule: "Design architecture, not geometry."</li>
 </ul>
-<h3 id="option-2-pure-text-json-yaml">Option 2: Pure Text JSON / YAML</h3>
+<h3 id="option-2-parameterized-definition-pure-jsonyaml-metadata">Option 2: Parameterized Definition (Pure JSON/YAML metadata)</h3>
 <ul>
-<li><strong>Pros</strong>: Human-readable, native Git diffing, easy to parse in any language, self-documenting.</li>
-<li><strong>Cons</strong>: Slow parser overhead for large arrays of data, larger file footprint (though negligible for metadata-only structures).</li>
-</ul>
-<h3 id="option-3-hybrid-package-recommended">Option 3: Hybrid Package (Recommended)</h3>
-<ul>
-<li><strong><code>.pbp</code></strong> as pure JSON/YAML (since it's strictly parametric definitions, vectors, and metadata).</li>
-<li><strong><code>.pba</code></strong> as a compressed bundle/archive (or a JSON metadata file referring to a standard <code>.gltf</code> / <code>.glb</code> or <code>.usdz</code> file for raw geometry).</li>
-<li><strong>Pros</strong>: Clean separation of lightweight metadata from heavy mesh/texture data. Uses industry-standard glTF/USD for geometry, making Blender and Swift integrations trivial.</li>
-<li><strong>Cons</strong>: Requires reading multi-file archives or references.</li>
+<li>The file stores coordinates, polylines, thickness, height, and references to surface styles. The geometry is compiled dynamically in-memory when loaded in Phoenix Builder or Phoenix Engine.</li>
+<li><strong>Pros</strong>:</li>
+<li>Non-destructive: editing a wall is as simple as updating a vector point or a height float.</li>
+<li>Tiny file size: files are lightweight text representations.</li>
+<li>Dynamic adaptation: we can automatically adjust LODs, UV mappings, and texture repetitions based on runtime size.</li>
+<li>Interactive: dynamic operations like cutting openings for doors or windows are calculated cleanly by subtracting bounding shapes from the primitive definition.</li>
+<li><strong>Cons</strong>:</li>
+<li>Requires writing robust geometry generators (tesselation, extrusion) in both the macOS builder application and the Swift game engine.</li>
+<li>Minor performance overhead on initial scene load to construct the meshes.</li>
 </ul>
 <hr />
 <h2 id="decision-outcome">Decision Outcome</h2>
-<p>We propose <strong>Option 3: Hybrid Package (JSON Metadata + Industry-Standard Geometry)</strong>.</p>
-<ol>
-<li><strong><code>.pbp</code> (Phoenix Primitive)</strong>: Pure JSON. It does not store raw mesh data; it only stores the mathematical parameters, footprint curves, height/thickness constraints, and surface recipe tags.</li>
-<li><strong><code>.pba</code> (Phoenix Building Asset)</strong>: A directory or package wrapper containing:</li>
-<li><code>metadata.json</code>: Defines semantic tags, socket arrays, LOD references, and material slots.</li>
-<li><code>mesh.glb</code> (or <code>mesh.usdz</code>): The actual 3D geometry authored by the artist.</li>
-</ol>
-<hr />
-<h2 id="proposed-schema-specifications">Proposed Schema Specifications</h2>
-<h3 id="1-pbp-phoenix-primitive-schema">1. <code>.pbp</code> (Phoenix Primitive) Schema</h3>
-<p>Below is the proposed JSON schema for a procedural wall or floor primitive:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;format_version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;asset_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;primitive&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;semantic_class&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wall&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wall_plaster_01&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;display_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Standard Plaster Wall&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;thickness&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;alignment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;footprint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;polyline&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;points&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;z&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">},</span>
-<span class="w">        </span><span class="p">{</span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;z&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">}</span>
-<span class="w">      </span><span class="p">]</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;surface_slots&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;interior_face&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;default_recipe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;recipe_plaster_white_01&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;exterior_face&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;default_recipe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;recipe_brick_red_01&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;sockets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;door_socket_01&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;door_opening&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;transform&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;position&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;z&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;rotation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;z&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;w&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">}</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;constraints&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;allowed_classes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;door&quot;</span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;max_width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;max_height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">2.2</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="2-pba-phoenix-building-asset-schema">2. <code>.pba</code> (Phoenix Building Asset) Schema</h3>
-<p>Below is the proposed JSON structure for the <code>metadata.json</code> accompanying an artist-authored asset (e.g., a window):</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;format_version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;asset_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;building_asset&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;semantic_class&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;window&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;window_gothic_double&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;display_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Gothic Double Window&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;geometry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mesh.glb&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;bounds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;min&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.6</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;z&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.1</span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;max&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.8</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;z&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1</span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pristine&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;mesh_node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;window_mesh_clean&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;damaged&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;mesh_node&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;window_mesh_broken&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;sockets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attachment_point&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;window_mount&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;transform&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;position&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;z&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;rotation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;z&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;w&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">}</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;material_slots&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;slot_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;frame_material&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;default_texture_set&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wood_oak_dark&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;swappable&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;slot_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;glass_material&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;default_texture_set&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;glass_clear&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;swappable&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
+<p>We chose <strong>Option 2: Parameterized Definition (Pure JSON)</strong>.</p>
+<p>Primitives will be stored as lightweight, human-readable JSON files that define the mathematical parameters and structural intent.</p>
 <hr />
 <h2 id="consequences">Consequences</h2>
 <ul>
-<li><strong>Interoperability</strong>: Standard tools can open <code>.glb</code> or <code>.usdz</code> meshes directly, meaning artists do not need specialized viewers just to inspect the visual part of the asset.</li>
-<li><strong>Deterministic Assembly</strong>: Primitives can calculate exact intersections using coordinate vectors, while sockets enforce clear constraints on what assets can snap to them.</li>
-<li><strong>Ease of Editing</strong>: Level 2 creators (Variant Creators) can simply duplicate a <code>.pba</code> folder, tweak <code>metadata.json</code> (e.g. modify the <code>default_texture_set</code> or scale limits), and register it as a new variant without modifying or duplicating the heavy 3D geometry asset (<code>mesh.glb</code>).</li>
-<li><strong>Source Control Friendly</strong>: Both schemas represent metadata in readable JSON, making history diffs highly legible and easy to merge.</li>
+<li><strong>Dynamic Extrusion and UV Generation</strong>: The editor (Phoenix Builder) and runtime (Phoenix Engine) must share a common triangulation/extrusion codebase (part of the Phoenix SDK) to ensure that the identical <code>.pbp</code> compiles to the exact same 3D mesh in both tools.</li>
+<li><strong>Dynamic Boolean Openings</strong>: Sockets and opening requests (from doors and windows) are evaluated on the fly. The primitive recalculates its geometric mesh by carving out the opening bounding box, preserving non-destructive editing.</li>
+<li><strong>Level 2 Editability</strong>: Users can open a <code>.pbp</code> in a text editor and tweak thickness, default heights, or change surface recipe IDs directly.</li>
 </ul>
 
 

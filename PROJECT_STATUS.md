@@ -1,22 +1,32 @@
 # Phoenix Ecosystem - Project Status
 
 ## Current Version
-- **Ecosystem Specs & Docs**: v2.2.0
+- **Ecosystem Specs & Docs**: v2.3.0
 - **Phoenix Builder**: v0.1.0 (Conceptual Design Phase)
 
 ## Current Sprint
-- **Sprint Name**: Core Specifications & Architectural Foundation
+- **Sprint Name**: Milestone 1: "First House" (MVP Vertical Slice)
 
 ## Current Milestone
-- **Milestone 0**: Foundation Complete (Scaffolding, ADRs, Docs Portal Setup)
+- **Milestone 1**: First House (Export a primitive skeleton and static assets from Forge, assemble a cottage in Builder, load and walk through it in How Not To Die).
 
 ## Current Goal
-- Establish the **Phoenix Architectural Language (PAL)** as the core shared semantic ontology of the ecosystem.
+- Compile a single beautiful, customizable house in Builder and test walk inside it in the game client (How Not To Die) within the next two weeks.
 
 ## Current Focus
-1. Creating the dedicated **PAL** directory (`docs/pal/`) and documenting the 7 core chapters (Philosophy, Grammar, Core Ontology, Sockets, Style System, Constraints).
-2. Refining navigation layout inside `mkdocs.yml` to make PAL a top-level section.
-3. Preparing auto-deploy pipeline verification.
+1. Creating the `PRODUCT_ROADMAP.md` double-track tracker.
+2. Rewriting `15_Roadmap.md` in the Design Bible to align with the Phoenix Spiral.
+3. Specifying the MVP metadata boundaries for the 5 core PAL classes: Wall, Floor, Roof, Door, Window.
+
+## PAL Class MVP Checklist
+
+| PAL Class | Primitive Schema | Builder Snapping | Game Engine Load | How Not To Die Integration | Status |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Wall** | [x] | [ ] | [ ] | [ ] | In Progress |
+| **Floor** | [x] | [ ] | [ ] | [ ] | Planned |
+| **Roof** | [ ] | [ ] | [ ] | [ ] | Planned |
+| **Door** | [ ] | [ ] | [ ] | [ ] | Planned |
+| **Window** | [ ] | [ ] | [ ] | [ ] | Planned |
 
 ## Completed
 - [x] Create core repo structure and workspace
@@ -25,18 +35,16 @@
 - [x] Define step-by-step assistant engineering process
 - [x] Rebrand SDK to PAL
 - [x] ADR-004: Phoenix Architectural Language (PAL) Ontology
+- [x] Formulate PAL Core Ontology 7 Chapters
 
 ## Blocked
 - None
 
 ## Known Risks
-- **Ontology Alignment**: Ensuring Blender python exporter and Swift compiler interpret PAL classes (like Miters, Sweeps, Clearances) identically. Mitigation: Document precise structural rules in `docs/pal/rules.md`.
+- **Scope Creep**: Getting distracted by complex trimming or procedural decay algorithms before achieving the "First House" walkthrough. Mitigation: Rely strictly on the "Now / Next / Later" boundaries of `PRODUCT_ROADMAP.md`.
 
 ## Next Milestone
-- **Milestone 1: PAL Alpha**: Finalized specifications for `.pbp`, `.pba`, and the complete PAL Ontology dictionary.
+- **Milestone 2**: Trim Profiles & Surface Recipes (Procedural moldings and style family swaps on the same cottage mesh).
 
 ## Recent Decisions
-- **ADR-004 (Proposed)**: Transitioned from code-level SDK to the Phoenix Architectural Language (PAL) semantic ontology.
-
-## Upcoming ADRs
-- **ADR-005**: Trim and Decorative Sweep Semantics.
+- **ADR-004**: Transitioned from code-level SDK to the Phoenix Architectural Language (PAL) semantic ontology.

@@ -1,7 +1,7 @@
 # Phoenix Ecosystem - Project Status
 
 ## Current Version
-- **Ecosystem Specs & Docs**: v2.1.0
+- **Ecosystem Specs & Docs**: v2.2.0
 - **Phoenix Builder**: v0.1.0 (Conceptual Design Phase)
 
 ## Current Sprint
@@ -14,30 +14,29 @@
 - Establish the **Phoenix Architectural Language (PAL)** as the core shared semantic ontology of the ecosystem.
 
 ## Current Focus
-1. Restructuring documentation layout to be Ecosystem-centric.
-2. Defining the PAL core semantic classes (Walls, Doors, Windows, Cornices) in `docs/specifications/pal_ontology.md`.
-3. Creating ADR-004 to document the transition from a technical SDK API to a semantic architectural ontology.
+1. Creating the dedicated **PAL** directory (`docs/pal/`) and documenting the 7 core chapters (Philosophy, Grammar, Core Ontology, Sockets, Style System, Constraints).
+2. Refining navigation layout inside `mkdocs.yml` to make PAL a top-level section.
+3. Preparing auto-deploy pipeline verification.
 
 ## Completed
 - [x] Create core repo structure and workspace
 - [x] Configure MkDocs Material & automatic deployment
 - [x] Establish `AI_CONTEXT.md` and `AGENTS.md` rules
 - [x] Define step-by-step assistant engineering process
-- [x] Initial draft of primitive (.pbp) and building asset (.pba) file structures
+- [x] Rebrand SDK to PAL
+- [x] ADR-004: Phoenix Architectural Language (PAL) Ontology
 
 ## Blocked
 - None
 
 ## Known Risks
-- **Ecosystem Schema Drift**: If Forge, Builder, or Engine interpret architectural semantics differently, asset validation fails. Mitigation: Define the exact ontology in the PAL Specification and enforce it via the Golden Rule process.
+- **Ontology Alignment**: Ensuring Blender python exporter and Swift compiler interpret PAL classes (like Miters, Sweeps, Clearances) identically. Mitigation: Document precise structural rules in `docs/pal/rules.md`.
 
 ## Next Milestone
 - **Milestone 1: PAL Alpha**: Finalized specifications for `.pbp`, `.pba`, and the complete PAL Ontology dictionary.
 
 ## Recent Decisions
-- **ADR-001 (Proposed)**: Decided on a Hybrid Package structure (JSON for metadata, glTF/USD for binary meshes) to separate geometry from metadata.
-- **ADR-002 (Proposed)**: Parametric Primitive Architecture (.pbp) represented as pure mathematical JSON data.
-- **ADR-003 (Proposed)**: Building Asset Architecture (.pba) represented as a folder bundle matching GLTF/USD with metadata.
+- **ADR-004 (Proposed)**: Transitioned from code-level SDK to the Phoenix Architectural Language (PAL) semantic ontology.
 
 ## Upcoming ADRs
-- **ADR-004**: Phoenix Architectural Language (PAL) Core Ontology.
+- **ADR-005**: Trim and Decorative Sweep Semantics.

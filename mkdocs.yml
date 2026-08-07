@@ -102,7 +102,13 @@ nav:
       - 16 Decision Log: design-bible/16_DecisionLog.md
 
   - Phoenix Architectural Language (PAL):
-      - PAL Overview: sdk/00_PhoenixSDKOverview.md
+      - 1. Introduction: pal/README.md
+      - 2. Philosophy: pal/philosophy.md
+      - 3. Grammar & Inheritance: pal/grammar.md
+      - 4. Core Ontology: pal/ontology.md
+      - 5. Host & Socket Rules: pal/rules.md
+      - 6. The Style System: pal/style_system.md
+      - 7. Constraints & Validation: pal/constraints.md
 
   - Specifications:
       - Specifications Index: specifications/README.md

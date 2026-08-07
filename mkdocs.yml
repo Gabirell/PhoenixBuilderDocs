@@ -124,6 +124,10 @@ nav:
 
       - sdk/00_PhoenixSDKOverview.md
 
+  - Architectural Decisions (ADR):
+
+      - ADR Index: adr/README.md
+
 extra:
 
   social:

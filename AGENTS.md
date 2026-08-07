@@ -26,5 +26,8 @@ The ecosystem consists of four independent but integrated projects:
 - Consider long-term maintainability for a solo developer.
 - Keep Builder focused on assembly, Forge on asset creation, and Engine on runtime.
 
+## Golden Rule
+- **No AI assistant may introduce a feature that changes the philosophy of Phoenix Builder without first proposing a Design Bible update.**
+
 Whenever suggesting a feature or implementation, verify that it aligns with this architecture.
 For full context, refer to [AI_CONTEXT.md](file:///Users/gabrielnetto/Documents/Programaciones/Phoenix/PhoenixBuilderDocs/AI_CONTEXT.md).

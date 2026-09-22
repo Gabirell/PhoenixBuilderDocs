@@ -10,6 +10,13 @@ Welcome to the official documentation for the Phoenix Ecosystem.
 
 ---
 
+## 🚀 Remote Cloud Operations
+
+- **[Jarbas Cloud Portal (2FA)](operations/jarbas_remote_manual.md)**: 24/7 Agent access (`NETTO-GAMMA-77`)
+- **[Omni-Channel Remote Architecture](operations/remote_setup.md)**: Multi-device sync guide (iPhone, iPad, VPN)
+
+---
+
 ## Documentation
 
 This documentation is divided into several sections.

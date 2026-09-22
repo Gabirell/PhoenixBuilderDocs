@@ -129,6 +129,10 @@ nav:
   - Tutorials:
       - Overview: tutorials/README.md
 
+  - Remote & Operations:
+      - Omni-Channel Setup: operations/remote_setup.md
+      - Jarbas Operations Manual: operations/jarbas_remote_manual.md
+
   - Architectural Decisions (ADR):
       - ADR Index: adr/README.md
       - ADR-001 (Asset Philosophy): adr/001_PhoenixAssetPhilosophy.md

@@ -1,0 +1,20 @@
+{
+  "name": "Phoenix Cloud Development (Antigravity)",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install --upgrade pip && pip install google-antigravity mkdocs mkdocs-material fastapi uvicorn websockets python-multipart && echo '✅ Antigravity & Phoenix Cloud Environment Ready!'"
+}

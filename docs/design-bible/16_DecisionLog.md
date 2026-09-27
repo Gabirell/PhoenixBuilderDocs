@@ -400,6 +400,102 @@ Cleaner ecosystem.
 
 ---
 
+# PB-013
+
+## Condition Variants (Pre-Authored Damage States)
+
+Status
+
+Accepted
+
+---
+
+### Context
+
+Users want buildings that can look damaged, abandoned, or destroyed — but a real-time physics or raytracing destruction system is a large, separate engineering effort that belongs to a runtime simulation, not a design-time assembler.
+
+---
+
+### Decision
+
+Any primitive (`.pbp`) or dressed asset (`.pba`) may declare pre-authored alternate states (`clean`, `damaged`, `collapsed`, and so on), hand-modeled in Phoenix Forge and swapped in deterministically by Builder or Engine.
+
+No physics or raytracing calculation is involved at any point. Activating a condition is a lookup and a mesh swap.
+
+See PAL Chapter 7 (Condition Variants) and `PHX-SPEC-001` §3.5.
+
+---
+
+### Consequences
+
+Buildings can look destroyed without Phoenix Builder becoming a physics engine.
+
+A future real-time destruction system, if ever pursued, belongs to Phoenix Engine as its own runtime feature — explicitly separate from this mechanism.
+
+---
+
+# PB-014
+
+## Reachability Check
+
+Status
+
+Accepted
+
+---
+
+### Context
+
+Freeform 2D room layout with automatic overlap resolution was considered and rejected (see PB-001: Phoenix Builder assembles, it does not model) — but the underlying goal, catching accidentally unreachable rooms, doesn't require freeform geometry at all.
+
+---
+
+### Decision
+
+Builder Scene Validation gains a Reachability Check: a graph walk over `Room` nodes connected through `Door`/`Opening` edges, starting from every building entrance. An unreachable `Room` fails validation like any other integrity issue (severity, explanation, suggested fix).
+
+This reasons only over the architectural graph PAL already models — no spatial or physics simulation required.
+
+---
+
+### Consequences
+
+Covers the practical goal of the original pathfinding request without adding a new geometry or simulation system to Builder.
+
+Any future runtime agent-navigation system (citizens/NPCs pathing through built interiors) is a separate, later Phoenix Engine concern, not part of this check.
+
+---
+
+# PB-015
+
+## Roblox Export Profile
+
+Status
+
+Accepted
+
+---
+
+### Context
+
+Roblox is a distinct target from the engine profiles already supported: it does not consume glTF/USD/a running scene file directly, it uses studs rather than meters, and its own SurfaceAppearance material system and MeshPart collision model differ from Unity/Godot/Unreal.
+
+---
+
+### Decision
+
+Add a Roblox Export Profile: MeshPart-based FBX/OBJ geometry, a documented stud conversion factor, Surface Recipes mapped to SurfaceAppearance where supported, and collision expressed as a Roblox fidelity setting. Architectural metadata is preserved as Instance Attributes.
+
+Publishing is acknowledged as the one profile where the last step is manual or scripted against Roblox's own API (Studio import / Open Cloud), rather than an instant file-based read like the other profiles.
+
+---
+
+### Consequences
+
+Extends Phoenix's reach to a major platform without pretending the workflow is as seamless as the others — the difference is documented rather than hidden.
+
+---
+
 # Maintaining the Decision Log
 
 Every major architectural change should create a new decision entry.

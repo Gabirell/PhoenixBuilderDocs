@@ -63,6 +63,12 @@ A `.pbp` file contains a single JSON root object with the following primary fiel
         "max_dimensions": { "width": 1.2, "height": 2.2, "depth": 0.5 }
       }
     }
+  ],
+  "condition_variants": [
+    {
+      "condition_id": "string (e.g., damaged | collapsed | scorched)",
+      "static_mesh_override": "string (path to a pre-authored .glb, made in Forge)"
+    }
   ]
 }
 ```
@@ -97,3 +103,8 @@ Sockets define coordinates where static objects (`.pba` assets) can snap onto a 
 * **`type`**: Matches target connection tags. A door socket will only allow `.pba` files whose metadata identifies them as `door`.
 * **`transform`**: Sockets are defined relative to the primitive's local coordinate system. When a wall changes length, socket positions must scale proportionally or snap to predefined anchors (e.g., start, center, end) using interpolation rules.
 * **`constraints`**: Prevents oversized objects from clipping geometry. A door socket on a thin partition wall will reject heavy gate assets.
+
+### 3.5. `condition_variants`
+Optional. Lets a primitive declare pre-authored alternate states (e.g. a breached wall, a collapsed roof section) **without any physics simulation or runtime geometry computation** — see [Condition Variants](../pal/ontology.md#7-condition-variants) for the full design rationale.
+* **`condition_id`**: A free-form tag (e.g. `damaged`, `collapsed`, `scorched`). Builder/Engine only ever activate a condition deterministically (an editor toggle, or a scripted gameplay trigger) — never as the output of a physics or destruction calculation.
+* **`static_mesh_override`**: When a condition is active, the compiler skips its normal parametric generation for this primitive and places this pre-authored mesh (modeled in Phoenix Forge, exported like a `.pba` submesh) at the primitive's transform instead. This mirrors `.pba`'s `variations`/`mesh_node_override` mechanism (`PHX-SPEC-002`) so both primitive and dressed-asset classes handle "premade destroyed pieces" the same way.

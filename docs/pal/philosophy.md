@@ -38,8 +38,8 @@ Because Builder understands PAL semantics, it executes this instruction using de
 | **"church"** | Identifies the layout footprint and structural grammar. | Retains structural grid. |
 | **"Gothic"** | Swaps the Style Family mappings. | Replaces all Victorian doors/windows with Gothic equivalents. |
 | **"abandoned"** | Activates decay filters across the scene. | Triggers structural deformation. |
-| **"broken stained glass"** | Selects the `damaged` variant of `Window` classes. | Switches submesh render nodes in the `.pba` packages. |
-| **"collapsed roof sections"** | Disables or modifies sections of the `RoofPlane` primitives. | Subtracts geometry mathematically. |
+| **"broken stained glass"** | Selects the `damaged` [Condition Variant](ontology.md#7-condition-variants) of `Window` classes. | Switches submesh render nodes in the `.pba` packages. |
+| **"collapsed roof sections"** | Selects the `collapsed` [Condition Variant](ontology.md#7-condition-variants) of the `RoofPlane` primitives. | Swaps in a pre-authored static mesh override — never a live physics or boolean computation. |
 | **"moss" & "water damage"** | Appends secondary textures to the local `Surface Recipes`. | Blends material shaders on host surfaces. |
 
 This is not AI generating geometry out of thin air. It is a procedural engine reasoning over **architectural meaning**. By designing PAL, we build the conceptual foundation that makes this level of control possible.

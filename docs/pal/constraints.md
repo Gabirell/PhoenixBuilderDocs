@@ -23,6 +23,7 @@ When a level designer (Level 1) or variant creator (Level 2) arranges assets in 
 * **Host Integrity Check**: Ensures all child objects (`Openings`, `Trims`, `Fixtures`) reside within their host boundaries. If a window is dragged completely off a wall, it fails validation.
 * **Clearance Collision check**: Verifies that door swing volumes and window apertures are not blocked by columns, furniture, or structural wall joins.
 * **Socket Matching**: Prevents the user from snapping incompatible connectors (e.g., attempting to snap a ceiling ornament into a floor socket).
+* **Reachability Check**: Walks the graph of `Room` nodes connected through `Door`/`Opening` edges, starting from every building entrance. A `Room` with no path back to an entrance fails validation — this catches accidental unreachable dead-end spaces without needing any spatial/physics simulation, since it only reasons over the architectural graph PAL already models. (This is a Builder, design-time check; it is separate from — and does not require — any runtime agent-navigation system Phoenix Engine may add later.)
 
 Failed validations display as warning markers inside the viewport hierarchy, ensuring errors are resolved before exporting the final scene.
 

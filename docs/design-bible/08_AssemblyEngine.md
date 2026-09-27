@@ -310,6 +310,8 @@ Broken stair
 
 Missing collision
 
+Unreachable room (no path to any entrance through doors/openings — see PAL Chapter 7, Reachability Check)
+
 Every issue receives:
 
 Severity

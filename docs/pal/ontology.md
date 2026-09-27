@@ -144,3 +144,20 @@ This chapter defines the **25 foundational architectural concepts** in the PAL c
 ### 6.3. `Handrail`
 * **Representation**: Trim Sweep or modular `.pba`.
 * **Semantic Role**: A protective barrier and grip running along stairs and balconies.
+
+---
+
+## 7. Condition Variants
+
+Any class in this ontology — primitive (`.pbp`) or dressed asset (`.pba`) — may declare **pre-authored alternate states**: `clean`, `damaged`, `collapsed`, `scorched`, and so on. This is the mechanism behind the "abandoned Gothic cathedral" example in [Semantic Generative Adaptation](philosophy.md#semantic-generative-adaptation) — a `Window` with a `damaged` variant, a `RoofPlane` with a `collapsed` variant.
+
+**Design rule, by explicit decision: pre-authored only, never simulated.** A condition variant is a hand-modeled alternative mesh made in Phoenix Forge ahead of time, swapped in deterministically — never the output of a real-time physics or raytracing calculation. This keeps the feature fully inside Builder's "assembler, not modeller" scope (`PB-001`) and inside Phoenix's broader determinism principle (every result reproducible, every export identical given the same inputs): activating a condition is a lookup and a mesh swap, not a simulation.
+
+* **On `.pba`** (dressed assets — doors, windows, props): the existing `variations` array (`PHX-SPEC-002`) already implements this — `variant_id` + `mesh_node_override`.
+* **On `.pbp`** (primitives — walls, floors, roofs, columns): `condition_variants` (`PHX-SPEC-001` §3.5) — the same idea, adapted for a format that normally has no baked mesh at all: activating a condition swaps out parametric generation for a pre-authored static override.
+
+**Who activates a condition, and when:**
+* **Builder**, at design time — an artist/level designer wants a building to look abandoned or war-torn as a deliberate stylistic choice.
+* **Engine**, at runtime — a scripted gameplay event (an explosion trigger, a quest state) swaps a primitive's or asset's active condition. This is still a deterministic state change driven by game logic elsewhere, not a physics simulation owned by this system.
+
+A live, physics/raytracing-driven destruction system (debris propagation, structural collapse simulation) is explicitly **out of scope** for Builder and for this mechanism. If ever pursued, it belongs to Phoenix Engine as its own runtime system, separate from Condition Variants.

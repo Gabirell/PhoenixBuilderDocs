@@ -50,6 +50,8 @@ Examples include:
 
 • Defold
 
+• Roblox
+
 • glTF
 
 • USD (future)
@@ -141,6 +143,26 @@ Selection mask
 Interaction mask
 
 Every layer is aligned and ready for immediate use.
+
+---
+
+# Roblox Profile
+
+Roblox does not consume glTF, USD, or a running-scene format directly the way Unity or Godot do.
+
+The Roblox profile therefore works differently from the others:
+
+Geometry exports as FBX/OBJ MeshParts, one per Building DNA piece where practical, respecting Roblox's per-mesh triangle budget.
+
+World-space coordinates are rescaled by a stud conversion factor (Roblox's stud is not a meter; a fixed, documented ratio is applied on export).
+
+Surface Recipes map onto Roblox SurfaceAppearance (Color, Normal, Roughness, Metalness maps) wherever the target supports it, falling back to baked textures otherwise.
+
+Collision exports as a fidelity setting per MeshPart (Default, Box, Precise) rather than a separate custom collision asset, matching how Roblox itself models collision.
+
+Publishing is the real difference from every other profile: Roblox requires assets to be brought in through Roblox Studio or the Open Cloud API, not read directly from a folder at runtime. The Roblox profile packages everything Studio/Open Cloud expects, but the last step is unavoidably manual (or scripted against Roblox's own API) rather than instant, unlike Phoenix Engine, Unity, or Godot exports.
+
+Architectural metadata (room identifiers, Construction Grammar references) is preserved as Attributes on the corresponding instances, so Roblox-side scripts can still reason about the building semantically.
 
 ---
 

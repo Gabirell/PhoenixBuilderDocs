@@ -335,3 +335,68 @@ Mirroring the RTF's own instruction ("I would NOT implement the entire rule engi
 The foundation this needs (semantic data model, deterministic seeding concept, Command/undo architecture, PAL role vocabulary) already exists or is already specified at the file-format level — this is genuinely additive work, not a rewrite. The biggest real risk isn't technical, it's scope: the canon describes a multi-year vision (full city generation, multi-engine export, Blender round-tripping). This plan deliberately carves out the smallest slice that (a) is real and shippable, (b) matches what you asked for — walls, furniture, procedural fill — and (c) doesn't block any of the bigger vision later, since every data-model choice here is additive and nothing forecloses District/Template/Terrain work down the line.
 
 The open questions in Section 10 are the only blockers to starting Phase 1.
+
+---
+
+## 14. Addendum: Impostors, Facade3D/Aberturas3D, and a scene stats panel
+
+Added after a follow-up question. Grounded by reading both side-project repos directly (not guessed) — `github.com/Gabirell/Facade3D` (internal name "Threextures") and `github.com/Gabirell/aberturas3D` — including their own existing integration note, `aberturas3D/INTEGRACAO-THREEXTURES.md`.
+
+### 14.1 What the two side projects actually are
+
+- **Facade3D / Threextures**: a browser tool (Three.js + Node) that takes a 2D facade **photo**, detects floor bands and window/door columns (computer vision, Manhattan-world assumption), extrudes a 2.5D mesh with recessed openings and PBR materials (own procedural presets + live Poly Haven CC0 lookup), and exports `.glb`/`.obj+.mtl`. Confirms the RTF's own description was accurate.
+- **Aberturas3D**: a parametric window/door generator (also Three.js + Node). Pick a category (6 opening types — fixed, hinged, sliding, roller shutter, curtain, double-hinged — covering both windows and doors), a size, a PBR material; it assembles the piece **at four LOD levels simultaneously** and exports `.glb`. This project already solves both things you just asked about:
+  - **A live polygon/vertex counter**, in its own words: *"the vertex table in the corner of the viewport is live: any change in size, category, or option recalculates all four levels."*
+  - **A real impostor bake**, not a flat placeholder rectangle: LOD3 is *"an orthographic front render of LOD0 into a WebGLRenderTarget with alpha, read back into a canvas — it's not a flat rectangle, it's the piece photographed."* Concretely (`src/viewport.js`, `bakeImpostor`): the camera frustum is sized from the asset's **real bounding box** (not the opening's nominal size, so shutters/sills/curtain rods that stick out aren't clipped), rendered orthographically to an off-screen target, alpha-unpremultiplied on readback so translucent glass doesn't bake as a dark smear. Its own numbers: a sliding window LOD0→LOD3 goes 368v/184tri → 344v/172tri → 124v/62tri → **4v/2tri**.
+
+  Facade3D has no impostor/LOD code at all (confirmed by direct search) — this entire technique is Aberturas3D's.
+
+### 14.2 They already have their own integration plan — reuse its philosophy, not its code
+
+`INTEGRACAO-THREEXTURES.md` (Gabriel's own prior note) proposes exactly three phases, cheapest first, and is explicit about what **not** to do:
+
+> *"Don't merge the repos. Don't share `src/`. The useful coupling is the file, not the code."*
+
+Phase 1 is a plain JSON exchange format (`openings.json`): Threextures already measures every detected opening in meters (`larguraM`/`alturaM`/`peitorilM`/position), so it just needs an "Export Openings" button; Aberturas3D gets an "Import Openings" batch screen that generates the matching `.glb` per opening, carrying the original `id` through to a `manifest.json` so the two sides can be matched up later. Phase 2 has Threextures load the generated `.glb` into the facade instead of a flat recessed rectangle. Phase 3 is a shared material-descriptor JSON so both tools' PBR libraries interoperate.
+
+**This is the right model for Phoenix Builder too — as a third, independent consumer, not a merge.** Phoenix Builder should only ever import `.glb` files these tools already export (plus, optionally, the same sidecar JSON convention), never run Node/Three.js, never share source. This keeps all three apps exactly as decoupled as Gabriel's own note already insists on.
+
+### 14.3 Proposed: an impostor-bake step in Phoenix Builder, ported from Aberturas3D's technique
+
+This directly extends Section 5.4 (`AssetLOD` + `SCNLevelOfDetail`) from earlier in this plan — same destination, now with a concrete source technique to port rather than one to invent:
+
+1. New function in `ModelImporter.swift`, e.g. `bakeImpostor(for node: SCNNode) -> (image: NSImage, size: CGSize)`:
+   - Compute the node's real accumulated bounding box (the recursive walker from this session's earlier bounding-box fix already does exactly this).
+   - Build an orthographic `SCNCamera` sized to that bounding box, front-on.
+   - Render off-screen via `SCNRenderer` (SceneKit's existing offscreen-render API — no new rendering infrastructure needed) into a transparent `CGContext`/bitmap, alpha un-premultiplied on readback — same precaution Aberturas3D's own code calls out for translucent glass.
+   - Bake the result into a small `SCNPlane` + unlit `SCNMaterial.diffuse` texture.
+2. Store that baked plane as the **cheapest entry** in the asset's `AssetLOD` list (Section 5.4), wired through `SCNLevelOfDetail` exactly as already proposed — this is additive to that section, not a new mechanism.
+3. Surface it as **one new, optional button** — "Generate Impostor LOD" — at two possible call sites, both non-destructive:
+   - Per-asset, in the asset inspector (next to the existing "Fix Orientation"/"Fix Scale…" actions added earlier this session).
+   - Batch, in the Library/Kits section — "Generate Impostors for Library," for background/far-placed assets specifically.
+4. **Zero risk to existing assets:** an asset with no baked impostor behaves exactly as it does today. This is purely something you opt into per asset, same as the existing Fix Orientation/Fix Scale overrides.
+
+### 14.4 Proposed: a manifest-aware import path for Facade3D/Aberturas3D output specifically (future, per your own "could be implemented in a future")
+
+Since Aberturas3D's `.glb` already carries `extras` metadata (type, category, LOD level, width, height, sill) and its batch export already produces a `manifest.json`, and Threextures' own planned `openings.json` carries the same width/height/sill-in-meters convention — `ModelImporter.swift` can gain an **opt-in** step: if an imported file (or folder) comes with a matching sidecar JSON, read it and pre-fill `AssetDefinition.dimensions`/`category`/the new `allowedRooms` (Section 5.1) instead of leaving them for manual entry. If no sidecar is present (every import today), behavior is unchanged. This is the natural "third app" extension of Gabriel's own Phase-1 `openings.json` idea — Phoenix Builder becomes the place a Threextures-detected opening and an Aberturas3D-generated window actually meet, without either of those two tools needing to know Phoenix Builder exists. Marked as a later phase, same reasoning as Section 10, Question 4.
+
+### 14.5 Proposed: a mesh/polygon/texture stats panel
+
+A new, read-only `SceneStatsView`, directly modeled on Aberturas3D's own live vertex table (same idea, SceneKit data instead of Three.js):
+
+- **Where it lives**: a small always-visible HUD panel in a corner of the 3D viewport (closest to Aberturas3D's own placement, and to `12_RenderingAndViewport.md`'s own "Debug overlays" concept, which already names "LOD Levels" as a planned overlay), *and* a fuller breakdown added to the existing, already-built Validate section (which already does exactly this kind of threshold-style check, just for layout issues rather than performance).
+- **What it measures**, walking `scnScene.rootNode` (read-only traversal, no mutation):
+  - Total vertex count: sum of each `SCNGeometry`'s vertex source count.
+  - Total triangle count: sum of each `SCNGeometryElement`'s `primitiveCount` where `primitiveType == .triangles`.
+  - Material count: distinct `SCNMaterial` instances in use.
+  - Rough draw-call estimate: distinct (geometry, material) pairs actually in the node graph.
+  - Rough texture memory estimate: sum of each loaded image's `width × height × 4 bytes`, ×~1.33 for mipmaps.
+  - Node/mesh count.
+- **Budget comparison**: reuses the `PhoenixBudget` type from Section 8 — green under budget, yellow approaching it, red over — the same color convention already proposed there and already present in Aberturas3D's own UI, so "budget" means one consistent thing across both the procedural-fill feature and this general health check, not two unrelated concepts.
+- **Risk**: none — this is a pure read-only reporting view. It doesn't touch any mutation path, any Command, or any existing UI; it can be deleted tomorrow with zero effect on anything else.
+
+### 14.6 Updated non-goals (extends Section 12)
+
+- No Node.js/Three.js dependency of any kind inside Phoenix Builder — Facade3D/Aberturas3D stay external tools whose *output files* get imported, never their runtime.
+- No merging of the three codebases, ever — matches Gabriel's own already-written rule for the other two.
+- No automatic opening-detection (reading a facade photo) inside Phoenix Builder — that's Threextures' job by design, duplicating it "creates two truths" (Gabriel's own words in `INTEGRACAO-THREEXTURES.md`).
